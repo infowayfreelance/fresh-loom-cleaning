@@ -76,8 +76,8 @@ export default function UpholsteryProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
-              alt="Upholstery cleaning hand tool moving across a fabric sofa cushion"
+              src="/images/upholstery-cleaning-extraction-process.webp"
+              alt="Professional upholstery cleaning equipment and preparation"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

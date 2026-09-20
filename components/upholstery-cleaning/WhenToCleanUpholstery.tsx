@@ -36,8 +36,8 @@ export default function WhenToCleanUpholstery() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/sofa-cleaning.png"
-              alt="Fresh, clean fabric sofa in a modern home after professional cleaning"
+              src="/images/freshly-cleaned-fabric-sofa.webp"
+              alt="Upholstery specialist discussing fabric care with a customer"
               fill
               sizes="50vw"
               className="object-cover"
