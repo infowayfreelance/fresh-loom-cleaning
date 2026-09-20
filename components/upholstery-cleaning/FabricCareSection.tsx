@@ -9,8 +9,8 @@ export default function FabricCareSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
-              alt="Close-up of upholstery fabric texture during professional cleaning"
+              src="/images/professional-fabric-upholstery-care.webp"
+              alt="Technician inspecting fabric before upholstery cleaning"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

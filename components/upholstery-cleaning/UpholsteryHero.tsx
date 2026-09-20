@@ -64,8 +64,8 @@ export default function UpholsteryHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/sofa-cleaning.jpg"
-            alt="Professional technician cleaning a fabric sofa with upholstery extraction equipment"
+            src="/images/professional-upholstery-cleaning-glasgow.webp"
+            alt="Professional upholstery cleaning service in Glasgow"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

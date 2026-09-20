@@ -8,8 +8,8 @@ export default function UpholsteryFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/sofa-cleaning.jpg"
-        alt="Freshly cleaned fabric sofa in a residential interior"
+        src="/images/clean-upholstery-modern-glasgow-home.webp"
+        alt="Freshly cleaned upholstery in a modern Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"
