@@ -8,8 +8,8 @@ export default function CarpetFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/gallery/carpet-cleaning.png"
-        alt="Freshly cleaned carpet in a residential interior"
+        src="/images/clean-carpet-modern-glasgow-home.webp"
+        alt="Clean carpet in a modern Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"

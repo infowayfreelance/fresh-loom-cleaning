@@ -76,8 +76,8 @@ export default function CarpetProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/carpet-cleaning.jpg"
-              alt="Carpet cleaning extraction wand working across carpet fibres"
+              src="/images/carpet-cleaning-extraction-process.webp"
+              alt="Professional carpet cleaning extraction process"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

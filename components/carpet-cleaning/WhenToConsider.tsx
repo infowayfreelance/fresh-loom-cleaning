@@ -35,8 +35,8 @@ export default function WhenToConsider() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/carpet-cleaning.png"
-              alt="Clean finished living-room carpet after professional cleaning"
+              src="/images/freshly-cleaned-living-room-carpet.webp"
+              alt="Freshly cleaned carpet in a residential living room"
               fill
               sizes="50vw"
               className="object-cover"
