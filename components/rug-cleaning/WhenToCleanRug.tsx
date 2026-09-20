@@ -35,8 +35,8 @@ export default function WhenToCleanRug() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/rug-cleaning.png"
-              alt="Finished clean area rug in a modern living room"
+              src="/images/freshly-cleaned-area-rug.webp"
+              alt="Freshly cleaned area rug in a bright living room"
               fill
               sizes="50vw"
               className="object-cover"

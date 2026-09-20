@@ -9,8 +9,8 @@ export default function RugMethodSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/rug-cleaning.jpg"
-              alt="Technician examining rug fibres and construction before treatment"
+              src="/images/professional-rug-fibre-inspection.webp"
+              alt="Technician inspecting rug fibres before professional cleaning"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

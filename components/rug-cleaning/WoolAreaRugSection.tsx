@@ -9,8 +9,8 @@ export default function WoolAreaRugSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/gallery/rug-cleaning.png"
-              alt="Detailed wool rug with visible natural fibre texture in a UK interior"
+              src="/images/wool-rug-cleaning-care.webp"
+              alt="Natural wool rug receiving careful professional assessment"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

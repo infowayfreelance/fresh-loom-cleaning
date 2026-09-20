@@ -63,8 +63,8 @@ export default function RugHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/rug-cleaning.jpg"
-            alt="Professional technician carefully cleaning a large area rug"
+            src="/images/professional-rug-cleaning-glasgow.webp"
+            alt="Professional technician cleaning a large area rug in Glasgow"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
