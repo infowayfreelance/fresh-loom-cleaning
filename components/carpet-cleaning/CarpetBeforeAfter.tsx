@@ -3,8 +3,16 @@ import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
 
 const results = [
-  { title: "Everyday Dirt & Build-Up", image: "/images/gallery/carpet-cleaning.png" },
-  { title: "Treated Marks", image: "/images/gallery/carpet-cleaning.png" },
+  {
+    title: "Everyday Dirt & Build-Up",
+    image: "/images/carpet-cleaning-dirt-before-after.webp",
+    alt: "Before and after deep carpet cleaning result",
+  },
+  {
+    title: "Treated Marks",
+    image: "/images/carpet-stain-treatment-before-after.webp",
+    alt: "Before and after carpet stain treatment result",
+  },
 ];
 
 export default function CarpetBeforeAfter() {
@@ -29,7 +37,7 @@ export default function CarpetBeforeAfter() {
                 <div className="relative w-full aspect-[2/1]">
                   <Image
                     src={item.image}
-                    alt={`Before and after carpet cleaning result: ${item.title.toLowerCase()}`}
+                    alt={item.alt}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"
