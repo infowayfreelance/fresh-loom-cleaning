@@ -10,8 +10,8 @@ export default function DeepRugSplit() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/gallery/rug-cleaning.png"
-              alt="Well-used area rug undergoing professional deep cleaning"
+              src="/images/deep-rug-cleaning-service.webp"
+              alt="Deep cleaning a heavily used area rug"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

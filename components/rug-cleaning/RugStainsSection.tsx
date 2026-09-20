@@ -55,8 +55,8 @@ export default function RugStainsSection() {
         <Reveal direction="right" delay={0.1}>
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/rug-cleaning.jpg"
-              alt="Careful spot treatment on a rug"
+              src="/images/rug-stain-treatment.webp"
+              alt="Professional spot and stain treatment on an area rug"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

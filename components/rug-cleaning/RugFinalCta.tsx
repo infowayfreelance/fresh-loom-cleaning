@@ -8,8 +8,8 @@ export default function RugFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/rug-cleaning.jpg"
-        alt="Freshly cleaned area rug in a residential interior"
+        src="/images/clean-rug-glasgow-home.webp"
+        alt="Professionally cleaned rug in a Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"

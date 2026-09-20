@@ -76,8 +76,8 @@ export default function RugProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/rug-cleaning.jpg"
-              alt="Close-up of professional rug cleaning equipment working across rug fibres"
+              src="/images/rug-cleaning-extraction-process.webp"
+              alt="Professional extraction equipment cleaning rug fibres"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

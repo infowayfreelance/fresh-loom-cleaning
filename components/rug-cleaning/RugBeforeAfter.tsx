@@ -20,8 +20,8 @@ export default function RugBeforeAfter() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/rug-cleaning.png"
-                alt="Before and after area rug cleaning result"
+                src="/images/rug-cleaning-before-after.webp"
+                alt="Area rug before and after professional cleaning"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"
