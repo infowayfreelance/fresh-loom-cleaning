@@ -18,8 +18,8 @@ export default function StainBeforeAfter() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/stain-removal.png"
-                alt="Genuine before and after stain removal treatment result"
+                src="/images/stain-removal-before-after.webp"
+                alt="Carpet stain before and after professional stain removal"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"

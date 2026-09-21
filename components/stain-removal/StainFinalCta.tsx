@@ -8,8 +8,8 @@ export default function StainFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/stain-removal.jpg"
-        alt="Professional stain treatment in a residential interior"
+        src="/images/fresh-clean-home-after-stain-removal.webp"
+        alt="Fresh clean living room after professional stain removal"
         fill
         sizes="100vw"
         className="object-cover"

@@ -61,8 +61,8 @@ export default function StainHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/stain-removal.jpg"
-            alt="Professional stain removal treatment on carpet"
+            src="/images/professional-stain-removal-glasgow.webp"
+            alt="Professional stain removal equipment beside a coffee spill on carpet"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
