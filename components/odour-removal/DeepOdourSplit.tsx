@@ -10,8 +10,8 @@ export default function DeepOdourSplit() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/odour-removal.jpg"
-              alt="Professional treatment concentrated on a persistent odour source"
+              src="/images/carpet-backing-odour-inspection.webp"
+              alt="Carpet backing and underlay being inspected for a persistent odour source"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

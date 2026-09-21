@@ -6,7 +6,6 @@ import OdourHero from "@/components/odour-removal/OdourHero";
 import OdourReturnReasons from "@/components/odour-removal/OdourReturnReasons";
 import OdourProcess from "@/components/odour-removal/OdourProcess";
 import DeepOdourSplit from "@/components/odour-removal/DeepOdourSplit";
-import SourceTreatmentSection from "@/components/odour-removal/SourceTreatmentSection";
 import CommonOdoursSection from "@/components/odour-removal/CommonOdoursSection";
 import PetOdourSection from "@/components/odour-removal/PetOdourSection";
 import WhenToConsiderOdourTreatment from "@/components/odour-removal/WhenToConsiderOdourTreatment";
@@ -25,5 +24,5 @@ export default function OdourRemovalPage() { return <>
   <Script id="odour-service-schema" type="application/ld+json" strategy="afterInteractive">{JSON.stringify(serviceSchema)}</Script>
   <Script id="odour-faq-schema" type="application/ld+json" strategy="afterInteractive">{JSON.stringify(faqSchema)}</Script>
   <Script id="odour-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">{JSON.stringify(breadcrumbs)}</Script>
-  <OdourHero /><OdourReturnReasons /><OdourProcess /><DeepOdourSplit /><SourceTreatmentSection /><CommonOdoursSection /><PetOdourSection /><WhenToConsiderOdourTreatment /><WhyChooseOdourRemoval /><OdourProjectGallery /><OdourFaq /><OdourFinalCta />
+  <OdourHero /><OdourReturnReasons /><OdourProcess /><DeepOdourSplit /><CommonOdoursSection /><PetOdourSection /><WhenToConsiderOdourTreatment /><WhyChooseOdourRemoval /><OdourProjectGallery /><OdourFaq /><OdourFinalCta />
 </>; }

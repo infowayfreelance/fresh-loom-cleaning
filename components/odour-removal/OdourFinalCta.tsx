@@ -8,8 +8,8 @@ export default function OdourFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/odour-removal.jpg"
-        alt="Professional odour treatment in a residential interior"
+        src="/images/fresh-home-after-odour-removal.webp"
+        alt="Fresh and comfortable Glasgow home after professional odour treatment"
         fill
         sizes="100vw"
         className="object-cover"

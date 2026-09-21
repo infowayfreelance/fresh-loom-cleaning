@@ -74,8 +74,8 @@ export default function OdourProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/odour-removal.jpg"
-              alt="Targeted professional treatment on a soft furnishing"
+              src="/images/odour-source-detection-process.webp"
+              alt="Professional inspection equipment being used to identify a carpet odour source"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
