@@ -74,8 +74,8 @@ export default function MattressProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
-              alt="Professional hand cleaning on detailed mattress grain"
+              src="/images/mattress-cleaning-preparation-process.webp"
+              alt="Preparing a mattress surface for professional cleaning"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

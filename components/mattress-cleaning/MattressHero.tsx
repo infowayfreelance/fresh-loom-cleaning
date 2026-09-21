@@ -61,8 +61,8 @@ export default function MattressHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/upholstery-cleaning.jpg"
-            alt="Professional mattress cleaning in a bedroom"
+            src="/images/professional-mattress-cleaning-glasgow.webp"
+            alt="Professional mattress cleaning in a Glasgow bedroom"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

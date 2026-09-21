@@ -8,8 +8,8 @@ export default function MattressFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/upholstery-cleaning.jpg"
-        alt="Premium mattress furniture in a residential interior"
+        src="/images/freshly-cleaned-mattress-glasgow.webp"
+        alt="Freshly cleaned mattress in a Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"
