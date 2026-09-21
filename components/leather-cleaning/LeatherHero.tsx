@@ -61,8 +61,8 @@ export default function LeatherHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/sofa-cleaning.jpg"
-            alt="Professional leather sofa cleaning"
+            src="/images/professional-leather-cleaning-glasgow.webp"
+            alt="Professional leather sofa cleaning in a Glasgow home"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

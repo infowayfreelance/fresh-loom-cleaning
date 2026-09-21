@@ -10,8 +10,8 @@ export default function LeatherHighContact() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/sofa-cleaning.jpg"
-              alt="Cleaning a leather sofa armrest"
+              src="/images/leather-sofa-high-contact-cleaning.webp"
+              alt="Targeted cleaning of a frequently used leather sofa armrest"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

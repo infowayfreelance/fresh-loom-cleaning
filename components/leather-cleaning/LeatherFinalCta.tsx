@@ -8,8 +8,8 @@ export default function LeatherFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/sofa-cleaning.jpg"
-        alt="Premium leather furniture in a residential interior"
+        src="/images/freshly-cleaned-leather-sofa-glasgow.webp"
+        alt="Freshly cleaned black leather sofa in a Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"

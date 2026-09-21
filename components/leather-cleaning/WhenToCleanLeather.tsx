@@ -33,8 +33,8 @@ export default function WhenToCleanLeather() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/leather-cleaning.png"
-              alt="Professionally cleaned leather furniture"
+              src="/images/leather-furniture-condition-assessment.webp"
+              alt="Professional assessment of a well-used blue leather recliner"
               fill
               sizes="50vw"
               className="object-cover"
