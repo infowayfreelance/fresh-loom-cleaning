@@ -61,8 +61,8 @@ export default function CurtainHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/upholstery-cleaning.jpg"
-            alt="Professional curtain cleaning in a residential home"
+            src="/images/professional-curtain-cleaning-glasgow.webp"
+            alt="Professional curtain cleaning assessment in a Glasgow home"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

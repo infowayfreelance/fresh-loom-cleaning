@@ -74,8 +74,8 @@ export default function CurtainProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
-              alt="Professional cleaner treating curtain fabric and folds"
+              src="/images/curtain-cleaning-assessment-process.webp"
+              alt="Curtain fabric and lining being examined before professional cleaning"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
