@@ -33,8 +33,8 @@ export default function WhenToCleanCurtains() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/curtain-cleaning.png"
-              alt="Freshly cleaned full-length curtains in daylight"
+              src="/images/curtain-condition-professional-assessment.webp"
+              alt="Professional assessment of a marked and frequently handled curtain edge"
               fill
               sizes="50vw"
               className="object-cover"

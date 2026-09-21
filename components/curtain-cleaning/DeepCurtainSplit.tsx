@@ -10,8 +10,8 @@ export default function DeepCurtainSplit() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
-              alt="Deep cleaning full-length curtains"
+              src="/images/deep-curtain-cleaning-treatment.webp"
+              alt="Professional deep cleaning treatment on full-length curtains"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

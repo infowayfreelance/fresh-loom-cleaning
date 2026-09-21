@@ -8,8 +8,8 @@ export default function CurtainFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/upholstery-cleaning.jpg"
-        alt="Fresh full-length curtains in a residential interior"
+        src="/images/freshly-cleaned-curtains-glasgow-home.webp"
+        alt="Freshly cleaned full-length curtains in a Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"

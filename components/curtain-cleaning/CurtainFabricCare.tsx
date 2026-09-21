@@ -9,8 +9,8 @@ export default function FabricCareSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
-              alt="Detailed curtain fibres and folds being examined before cleaning"
+              src="/images/curtain-fabric-and-lining-inspection.webp"
+              alt="Different curtain fabrics and linings prepared for professional assessment"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
