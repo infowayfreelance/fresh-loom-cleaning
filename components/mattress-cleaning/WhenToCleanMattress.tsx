@@ -33,8 +33,8 @@ export default function WhenToCleanMattress() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/mattress-cleaning.png"
-              alt="Professionally cleaned mattress furniture"
+              src="/images/mattress-condition-assessment.webp"
+              alt="Professional assessment of a well-used mattress condition"
               fill
               sizes="50vw"
               className="object-cover"

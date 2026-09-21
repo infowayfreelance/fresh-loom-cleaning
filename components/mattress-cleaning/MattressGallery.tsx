@@ -18,8 +18,8 @@ export default function MattressGallery() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/mattress-cleaning.png"
-                alt="Professional mattress cleaning project"
+                src="/images/mattress-cleaning-before-after.webp"
+                alt="Mattress before and after professional cleaning"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"
