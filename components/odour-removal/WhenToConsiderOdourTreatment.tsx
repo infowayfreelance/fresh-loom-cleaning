@@ -33,8 +33,8 @@ export default function WhenToConsiderOdourTreatment() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/odour-removal.png"
-              alt="Targeted carpet odour treatment in a home"
+              src="/images/when-professional-odour-treatment-needed.webp"
+              alt="Signs that a carpet or sofa may need professional odour treatment"
               fill
               sizes="50vw"
               className="object-cover"
