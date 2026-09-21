@@ -61,8 +61,8 @@ export default function OdourHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/odour-removal.jpg"
-            alt="Professional odour treatment on carpet"
+            src="/images/professional-odour-removal-glasgow.webp"
+            alt="Professional inspection to locate a hidden carpet odour source in a Glasgow home"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
