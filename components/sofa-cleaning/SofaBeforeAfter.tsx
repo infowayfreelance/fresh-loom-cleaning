@@ -18,8 +18,8 @@ export default function SofaBeforeAfter() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/sofa-cleaning.png"
-                alt="Before and after sofa upholstery cleaning result"
+                src="/images/sofa-cleaning-before-after.webp"
+                alt="Fabric sofa before and after professional cleaning"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"

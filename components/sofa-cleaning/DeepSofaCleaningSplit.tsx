@@ -10,8 +10,8 @@ export default function DeepSofaCleaningSplit() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/sofa-cleaning.jpg"
-              alt="Technician professionally cleaning a frequently used fabric sofa"
+              src="/images/deep-sofa-cleaning-extraction.webp"
+              alt="Deep extraction cleaning of a heavily used fabric sofa"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
