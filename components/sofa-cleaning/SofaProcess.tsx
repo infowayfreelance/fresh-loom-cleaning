@@ -74,8 +74,8 @@ export default function SofaProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/sofa-cleaning.jpg"
-              alt="Sofa cleaning hand tool moving across a fabric sofa cushion"
+              src="/images/sofa-cleaning-preparation-process.webp"
+              alt="Sofa cushions and professional cleaning equipment prepared for treatment"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
