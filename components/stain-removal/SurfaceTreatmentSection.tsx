@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Layers3, Sofa, Armchair, RectangleHorizontal } from "lucide-react";
 import Reveal from "../Reveal";
@@ -12,10 +13,23 @@ const surfaces = [
 
 export default function SurfaceTreatmentSection() {
   return <section className="py-16 lg:py-24 bg-cream"><div className="container-page">
-    <Reveal className="max-w-2xl mb-14">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">Stain Treatment Across Different Furnishings</h2>
-      <div className="space-y-4 text-slate-600"><p>Stains do not only happen on carpets.</p><p>A drink can reach a sofa cushion, food can land on a dining chair and muddy footwear can leave a mark across a rug.</p><p>We provide targeted treatment for suitable surfaces while considering the characteristics of each material.</p></div>
-    </Reveal>
+    <div className="grid lg:grid-cols-2 gap-12 items-center mb-14">
+      <Reveal direction="left">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">Stain Treatment Across Different Furnishings</h2>
+        <div className="space-y-4 text-slate-600"><p>Stains do not only happen on carpets.</p><p>A drink can reach a sofa cushion, food can land on a dining chair and muddy footwear can leave a mark across a rug.</p><p>We provide targeted treatment for suitable surfaces while considering the characteristics of each material.</p></div>
+      </Reveal>
+      <Reveal direction="right" delay={0.1}>
+        <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+          <Image
+            src="/images/stain-treatment-different-furnishings.webp"
+            alt="Carpet sofa rug and upholstery suitable for professional stain treatment"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+      </Reveal>
+    </div>
     <StaggerGroup className="grid sm:grid-cols-2 gap-6">{surfaces.map((item) => <StaggerItem key={item.title}><Link href={item.href} className="block h-full bg-white rounded-2xl border border-black/5 shadow-sm p-7 transition-transform hover:-translate-y-1"><div className="w-12 h-12 rounded-full bg-accent/10 text-accent-dark flex items-center justify-center mb-5"><item.icon size={22} /></div><h3 className="text-lg font-bold text-navy-dark mb-2">{item.title}</h3><p className="text-sm text-slate-600">{item.description}</p></Link></StaggerItem>)}</StaggerGroup>
   </div></section>;
 }

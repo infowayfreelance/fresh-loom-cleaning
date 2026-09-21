@@ -74,8 +74,8 @@ export default function StainProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/stain-removal.jpg"
-              alt="Technician carefully applying professional spotting treatment to a localised stain"
+              src="/images/stain-assessment-and-fibre-test.webp"
+              alt="Professional fabric assessment before stain treatment"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

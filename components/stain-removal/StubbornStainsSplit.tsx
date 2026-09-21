@@ -10,8 +10,8 @@ export default function StubbornStainsSplit() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/stain-removal.jpg"
-              alt="Professional focused treatment of a realistic household stain"
+              src="/images/stubborn-carpet-stain-treatment.webp"
+              alt="Professional treatment of a stubborn carpet stain"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

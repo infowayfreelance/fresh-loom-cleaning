@@ -9,8 +9,8 @@ export default function FabricCareSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/stain-removal.jpg"
-              alt="Detailed carpet and upholstery texture being assessed before stain treatment"
+              src="/images/carpet-rug-upholstery-fibre-comparison.webp"
+              alt="Comparison of carpet rug and upholstery fibre materials"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

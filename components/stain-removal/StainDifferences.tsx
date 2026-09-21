@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Hand, Droplet, Wind } from "lucide-react";
 import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
@@ -26,25 +27,39 @@ export default function StainDifferences() {
   return (
     <section className="py-16 lg:py-24 bg-light">
       <div className="container-page">
-        <Reveal className="max-w-2xl mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-            Why Different Stains Need Different Treatment
-          </h2>
-          <div className="space-y-4 text-slate-600">
-            <p>
-              A stain is more than a coloured mark on a surface.
-            </p>
-            <p>
-              What caused it matters. So does the material it landed on, how long it has been there and what has already been used to clean it.
-            </p>
-            <p>
-              An oily mark can behave differently from a drink spill. Pigments from food or wine may interact with fibres differently from mud or everyday dirt. A household cleaning product can sometimes change the stain before a professional sees it.
-            </p>
-            <p>
-              That is why professional stain removal starts with understanding the problem rather than reaching for one universal solution.
-            </p>
-          </div>
-        </Reveal>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-14">
+          <Reveal direction="left">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+              Why Different Stains Need Different Treatment
+            </h2>
+            <div className="space-y-4 text-slate-600">
+              <p>
+                A stain is more than a coloured mark on a surface.
+              </p>
+              <p>
+                What caused it matters. So does the material it landed on, how long it has been there and what has already been used to clean it.
+              </p>
+              <p>
+                An oily mark can behave differently from a drink spill. Pigments from food or wine may interact with fibres differently from mud or everyday dirt. A household cleaning product can sometimes change the stain before a professional sees it.
+              </p>
+              <p>
+                That is why professional stain removal starts with understanding the problem rather than reaching for one universal solution.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal direction="right" delay={0.1}>
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/different-household-stain-types.webp"
+                alt="Different household stains on carpet and upholstery samples"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         <StaggerGroup className="grid md:grid-cols-3 gap-6">
           {points.map((point) => (
