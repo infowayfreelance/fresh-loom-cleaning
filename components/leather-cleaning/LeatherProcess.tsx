@@ -74,8 +74,8 @@ export default function LeatherProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/sofa-cleaning.jpg"
-              alt="Professional hand cleaning on detailed leather grain"
+              src="/images/leather-cleaning-assessment-process.webp"
+              alt="Professional cleaning a leather sofa armrest with a soft brush"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

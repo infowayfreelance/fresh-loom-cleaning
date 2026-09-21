@@ -18,8 +18,8 @@ export default function LeatherGallery() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/leather-cleaning.png"
-                alt="Professional leather cleaning project"
+                src="/images/leather-cleaning-before-after.webp"
+                alt="Leather armchair before and after professional cleaning"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"
