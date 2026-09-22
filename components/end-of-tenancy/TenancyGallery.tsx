@@ -18,8 +18,8 @@ export default function TenancyGallery() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/end-of-tenancy-deep-clean.png"
-                alt="Genuine before and after stain removal treatment result"
+                src="/images/end-of-tenancy-cleaning-before-after.webp"
+                alt="Property before and after professional end of tenancy cleaning"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"
