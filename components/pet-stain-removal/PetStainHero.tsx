@@ -61,8 +61,8 @@ export default function PetStainHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/pet-stain-removal.jpg"
-            alt="Professional pet stain removal on carpet"
+            src="/images/professional-pet-stain-removal-glasgow.webp"
+            alt="Professional pet stain removal on a carpet in a Glasgow home"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

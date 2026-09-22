@@ -8,8 +8,8 @@ export default function PetStainFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/pet-stain-removal.jpg"
-        alt="Professional stain treatment in a residential interior"
+        src="/images/fresh-home-after-pet-stain-removal.webp"
+        alt="Fresh, clean home interior after professional pet stain removal"
         fill
         sizes="100vw"
         className="object-cover"
