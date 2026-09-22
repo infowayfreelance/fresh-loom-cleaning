@@ -33,8 +33,8 @@ export default function WhenToSeekPetTreatment() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/pet-stain-removal.png"
-              alt="Professional assessment of a localised household stain"
+              src="/images/professional-pet-stain-assessment.webp"
+              alt="Professional assessment of a pet stain before treatment"
               fill
               sizes="50vw"
               className="object-cover"

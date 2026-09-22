@@ -18,8 +18,8 @@ export default function PetStainGallery() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
             <div className="relative w-full aspect-[2/1]">
               <Image
-                src="/images/gallery/pet-stain-removal.png"
-                alt="Genuine before and after stain removal treatment result"
+                src="/images/pet-stain-removal-before-after.webp"
+                alt="Pet stain before and after professional removal treatment"
                 fill
                 sizes="(min-width: 768px) 60vw, 100vw"
                 className="object-cover"

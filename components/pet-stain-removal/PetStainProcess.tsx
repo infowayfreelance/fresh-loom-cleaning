@@ -74,8 +74,8 @@ export default function PetStainProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/pet-stain-removal.jpg"
-              alt="Targeted professional treatment of a pet accident area"
+              src="/images/pet-stain-assessment-and-treatment.webp"
+              alt="Professional assessment and treatment of a pet stain"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
