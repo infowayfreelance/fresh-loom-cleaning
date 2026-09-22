@@ -33,8 +33,8 @@ export default function WhenToChooseMoveOut() {
 
           <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl mt-8 hidden lg:block">
             <Image
-              src="/images/gallery/end-of-tenancy-deep-clean.png"
-              alt="Professional assessment of a localised household stain"
+              src="/images/professional-move-out-clean-assessment.webp"
+              alt="Professional assessment of a property before a move-out clean"
               fill
               sizes="50vw"
               className="object-cover"

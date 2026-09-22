@@ -8,8 +8,8 @@ export default function TenancyFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/end-of-tenancy-deep-clean.jpg"
-        alt="Professional stain treatment in a residential interior"
+        src="/images/clean-rental-property-ready-for-handover.webp"
+        alt="Clean rental property ready for tenancy handover"
         fill
         sizes="100vw"
         className="object-cover"

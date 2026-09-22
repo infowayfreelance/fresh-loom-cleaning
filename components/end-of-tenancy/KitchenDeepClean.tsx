@@ -10,8 +10,8 @@ export default function KitchenDeepClean() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/end-of-tenancy-deep-clean.jpg"
-              alt="Professional focused treatment of a realistic household stain"
+              src="/images/end-of-tenancy-kitchen-deep-clean.webp"
+              alt="Detailed kitchen cleaning before tenancy handover"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

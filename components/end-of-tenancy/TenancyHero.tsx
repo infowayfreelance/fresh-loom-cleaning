@@ -61,8 +61,8 @@ export default function TenancyHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/end-of-tenancy-deep-clean.jpg"
-            alt="Professional end of tenancy cleaning in a rental property"
+            src="/images/professional-end-of-tenancy-cleaning-glasgow.webp"
+            alt="Professional end of tenancy cleaning in a Glasgow rental property"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

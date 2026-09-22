@@ -74,8 +74,8 @@ export default function TenancyProcess() {
 
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
-              src="/images/services/end-of-tenancy-deep-clean.jpg"
-              alt="Professional cleaner working systematically in an empty flat"
+              src="/images/room-by-room-tenancy-cleaning-process.webp"
+              alt="Room-by-room professional cleaning process in a rental property"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
