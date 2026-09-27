@@ -22,7 +22,7 @@ export default function CarpetHero() {
             className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-6 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Professional Carpet Cleaning for a Deeper, Fresher Clean
+            Advanced Carpet Cleaning Services
           </h1>
           <div
             className="space-y-4 text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
