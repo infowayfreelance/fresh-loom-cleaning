@@ -17,6 +17,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services",
   },
+  openGraph: {
+    title: "Expert Cleaning Services in Glasgow",
+    description:
+      "Looking for top-notch cleaning in Glasgow? Trust our team for exceptional results. Get in touch today!",
+    url: "/services",
+    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Expert Cleaning Services in Glasgow",
+    description:
+      "Looking for top-notch cleaning in Glasgow? Trust our team for exceptional results. Get in touch today!",
+    images: ["/images/og-home.jpg"],
+  },
 };
 
 const servicesCollectionSchema = {

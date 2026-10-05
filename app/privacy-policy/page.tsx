@@ -14,6 +14,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/privacy-policy",
   },
+  openGraph: {
+    title: `Privacy Policy | ${siteInfo.name}`,
+    description,
+    url: "/privacy-policy",
+    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Privacy Policy | ${siteInfo.name}`,
+    description,
+    images: ["/images/og-home.jpg"],
+  },
 };
 
 const breadcrumbs = breadcrumbSchema([

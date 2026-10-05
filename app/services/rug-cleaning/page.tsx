@@ -25,6 +25,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services/rug-cleaning",
   },
+  openGraph: {
+    title: "Transform Your Space with Our Rug Cleaning Solutions",
+    description:
+      "Bring your rugs back to life with our professional cleaning. Schedule a service today and enjoy freshness!",
+    url: "/services/rug-cleaning",
+    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Transform Your Space with Our Rug Cleaning Solutions",
+    description:
+      "Bring your rugs back to life with our professional cleaning. Schedule a service today and enjoy freshness!",
+    images: ["/images/og-home.jpg"],
+  },
 };
 
 const serviceSchema = {

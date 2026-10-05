@@ -8,6 +8,27 @@ const nextConfig: NextConfig = {
     // Next doesn't jump straight to the 640px device-size bucket for it.
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 432],
   },
+  async headers() {
+    // Baseline security headers only. These are additive and do not affect
+    // crawlability — search engine bots ignore them, and no path is blocked.
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
