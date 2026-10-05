@@ -14,6 +14,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/terms-and-conditions",
   },
+  openGraph: {
+    title: `Terms & Conditions | ${siteInfo.name}`,
+    description,
+    url: "/terms-and-conditions",
+    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Terms & Conditions | ${siteInfo.name}`,
+    description,
+    images: ["/images/og-home.jpg"],
+  },
 };
 
 const breadcrumbs = breadcrumbSchema([

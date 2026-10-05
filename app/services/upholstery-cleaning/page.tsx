@@ -25,6 +25,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services/upholstery-cleaning",
   },
+  openGraph: {
+    title: "Restore Your Upholstery with Top Cleaning Solutions",
+    description:
+      "Tired of dull furniture? Professional upholstery cleaning brings new life. Contact us for a consultation!",
+    url: "/services/upholstery-cleaning",
+    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Restore Your Upholstery with Top Cleaning Solutions",
+    description:
+      "Tired of dull furniture? Professional upholstery cleaning brings new life. Contact us for a consultation!",
+    images: ["/images/og-home.jpg"],
+  },
 };
 
 const serviceSchema = {

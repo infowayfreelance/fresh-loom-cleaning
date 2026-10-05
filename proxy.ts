@@ -7,7 +7,7 @@ const ALLOWED_COUNTRIES = ["PK", "GB"];
 // always be able to reach the site regardless of their crawl location, or ads
 // get disapproved and pages drop out of search results.
 const ALLOWED_BOT_UA =
-  /googlebot|adsbot-google|google-inspectiontool|mediapartners-google|bingbot|bingpreview|duckduckbot|applebot|chrome-lighthouse|lighthouse|pagespeed|gtmetrix|pingdom|uptimerobot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|slackbot|w3c_validator/i;
+  /googlebot|googleother|adsbot-google|google-inspectiontool|mediapartners-google|bingbot|bingpreview|adidxbot|duckduckbot|applebot|chrome-lighthouse|lighthouse|pagespeed|gtmetrix|pingdom|uptimerobot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|slackbot|w3c_validator/i;
 
 export function proxy(request: NextRequest) {
   const userAgent = request.headers.get("user-agent") ?? "";
@@ -27,5 +27,7 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml|google[a-z0-9]+\\.html).*)",
+  ],
 };

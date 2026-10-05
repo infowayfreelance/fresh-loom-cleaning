@@ -15,6 +15,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/contact-us",
   },
+  openGraph: {
+    title: "Get in Touch with Fresh Loom Cleaning Services",
+    description:
+      "Need a deep clean? Fresh Loom Carpet Cleaning offers expert solutions. Contact us for a quote now.",
+    url: "/contact-us",
+    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Get in Touch with Fresh Loom Cleaning Services",
+    description:
+      "Need a deep clean? Fresh Loom Carpet Cleaning offers expert solutions. Contact us for a quote now.",
+    images: ["/images/og-home.jpg"],
+  },
 };
 
 const contactPageSchema = {
