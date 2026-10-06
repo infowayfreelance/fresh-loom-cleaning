@@ -8,7 +8,6 @@ import WhyFreshLoom from "@/components/about/WhyFreshLoom";
 import BusinessStats from "@/components/about/BusinessStats";
 import ServicesWeProvide from "@/components/about/ServicesWeProvide";
 import WhereWeServe from "@/components/about/WhereWeServe";
-import CustomerReviews from "@/components/about/CustomerReviews";
 import VisitContact from "@/components/about/VisitContact";
 import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
@@ -69,7 +68,6 @@ export default function AboutUsPage() {
       <BusinessStats />
       <ServicesWeProvide />
       <WhereWeServe />
-      <CustomerReviews />
       <VisitContact />
     </>
   );
