@@ -3,11 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronRight, Star, Tag } from "lucide-react";
-import { siteInfo, stats } from "@/lib/data";
-import AnimatedCounter from "./AnimatedCounter";
-
-const statColors = ["text-navy-dark", "text-accent", "text-navy-dark"];
+import { ArrowUpRight, ChevronRight, Tag } from "lucide-react";
+import { siteInfo } from "@/lib/data";
 
 export default function AboutHero() {
   return (
@@ -45,7 +42,7 @@ export default function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] as const }}
           >
-            The Team Behind Every Fresh, Spotless Home
+            About Fresh Loom Carpet Cleaning
           </motion.h1>
 
           <motion.p
@@ -54,11 +51,13 @@ export default function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
           >
-            {`For over a decade, ${siteInfo.name} has helped homes and businesses across the UK breathe easier — one deep clean at a time.`}
+            Fresh Loom Carpet Cleaning provides professional cleaning services for homes and
+            properties, with a focus on careful service, practical cleaning solutions and
+            customer satisfaction.
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap gap-4 mb-10"
+            className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] as const }}
@@ -70,67 +69,23 @@ export default function AboutHero() {
               Call Us <ArrowUpRight size={18} />
             </a>
           </motion.div>
-
-          <motion.div
-            className="flex gap-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] as const }}
-          >
-            {stats.map((s, i) => (
-              <div key={s.label}>
-                <div className={`text-3xl font-bold font-heading ${statColors[i % statColors.length]}`}>
-                  <AnimatedCounter value={s.value} />
-                </div>
-                <div className="text-sm text-slate-500 mt-1">{s.label}</div>
-              </div>
-            ))}
-          </motion.div>
         </div>
 
         <motion.div
-          className="hidden lg:flex justify-end"
-          initial={{ opacity: 0, scale: 0.9 }}
+          className="hidden lg:block"
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
         >
-          <div className="relative w-[320px] aspect-[414/602]">
-            <div className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 w-[125%] h-[70%] rounded-full bg-accent/15 -z-10" />
-            <div className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 w-[95%] h-[53%] rounded-full bg-accent -z-10" />
+          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/hero-cleaner.png"
-              alt="Fresh Loom Carpet Cleaning team"
-              width={414}
-              height={602}
-              className="drop-shadow-2xl w-full h-full object-contain"
+              src="/images/professional-cleaner-arriving-glasgow-property.webp"
+              alt="Fresh Loom Carpet Cleaning technician arriving at a Glasgow property"
+              fill
               priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
             />
-
-            <motion.div
-              className="absolute -bottom-6 -left-6 bg-navy-dark text-white rounded-2xl px-6 py-4 shadow-xl"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <div className="text-2xl font-extrabold">10+</div>
-              <div className="text-sm text-white/80">Years Experience</div>
-            </motion.div>
-
-            <motion.div
-              className="absolute top-6 -left-10 bg-white rounded-2xl px-5 py-3 shadow-xl flex items-center gap-2"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.65 }}
-            >
-              <div className="flex text-accent">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
-                ))}
-              </div>
-              <span className="text-sm font-bold text-navy-dark whitespace-nowrap">
-                Trusted by 1,000+
-              </span>
-            </motion.div>
           </div>
         </motion.div>
       </div>
