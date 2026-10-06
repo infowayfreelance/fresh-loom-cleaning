@@ -1,34 +1,38 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import AboutHero from "@/components/AboutHero";
-import TrustedExperts from "@/components/TrustedExperts";
-import VisionMission from "@/components/VisionMission";
-import AboutIntro from "@/components/AboutIntro";
-import CtaBanner from "@/components/CtaBanner";
+import AboutHero from "@/components/about/AboutHero";
+import OurStory from "@/components/about/OurStory";
+import OurApproach from "@/components/about/OurApproach";
+import WhyFreshLoom from "@/components/about/WhyFreshLoom";
+import BusinessStats from "@/components/about/BusinessStats";
+import ServicesWeProvide from "@/components/about/ServicesWeProvide";
+import WhereWeServe from "@/components/about/WhereWeServe";
+import CustomerReviews from "@/components/about/CustomerReviews";
+import VisitContact from "@/components/about/VisitContact";
 import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 
-const description = `${siteInfo.name} provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses across the UK.`;
+const description = `${siteInfo.name} provides professional carpet, upholstery, sofa and rug cleaning services for homes and properties across Glasgow and surrounding areas.`;
 
 export const metadata: Metadata = {
-  title: "Transform Your Home with Fresh Loom Carpet Cleaning",
+  title: "About Fresh Loom Carpet Cleaning",
   description:
-    "Looking for carpet cleaning? Choose Fresh Loom for a professional touch, ensuring carpets look brand new!",
+    "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.",
   alternates: {
     canonical: "/about-us",
   },
   openGraph: {
-    title: "Transform Your Home with Fresh Loom Carpet Cleaning",
+    title: "About Fresh Loom Carpet Cleaning",
     description:
-      "Looking for carpet cleaning? Choose Fresh Loom for a professional touch, ensuring carpets look brand new!",
+      "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.",
     url: "/about-us",
     images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transform Your Home with Fresh Loom Carpet Cleaning",
+    title: "About Fresh Loom Carpet Cleaning",
     description:
-      "Looking for carpet cleaning? Choose Fresh Loom for a professional touch, ensuring carpets look brand new!",
+      "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.",
     images: ["/images/og-home.jpg"],
   },
 };
@@ -57,10 +61,14 @@ export default function AboutUsPage() {
         {JSON.stringify(breadcrumbs)}
       </Script>
       <AboutHero />
-      <TrustedExperts />
-      <VisionMission />
-      <AboutIntro />
-      <CtaBanner />
+      <OurStory />
+      <OurApproach />
+      <WhyFreshLoom />
+      <BusinessStats />
+      <ServicesWeProvide />
+      <WhereWeServe />
+      <CustomerReviews />
+      <VisitContact />
     </>
   );
 }
