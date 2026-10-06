@@ -3,6 +3,7 @@ import Script from "next/script";
 import AboutHero from "@/components/about/AboutHero";
 import OurStory from "@/components/about/OurStory";
 import OurApproach from "@/components/about/OurApproach";
+import FreshLoomAtWork from "@/components/about/FreshLoomAtWork";
 import WhyFreshLoom from "@/components/about/WhyFreshLoom";
 import BusinessStats from "@/components/about/BusinessStats";
 import ServicesWeProvide from "@/components/about/ServicesWeProvide";
@@ -63,6 +64,7 @@ export default function AboutUsPage() {
       <AboutHero />
       <OurStory />
       <OurApproach />
+      <FreshLoomAtWork />
       <WhyFreshLoom />
       <BusinessStats />
       <ServicesWeProvide />

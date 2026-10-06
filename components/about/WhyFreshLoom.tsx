@@ -29,7 +29,7 @@ const points = [
 
 export default function WhyFreshLoom() {
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24 bg-light">
       <div className="container-page">
         <Reveal className="max-w-2xl mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark">

@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { BookOpen } from "lucide-react";
 import Reveal from "../Reveal";
-import PhotoPlaceholder from "./PhotoPlaceholder";
 
 export default function OurStory() {
   return (
@@ -27,7 +27,15 @@ export default function OurStory() {
         </Reveal>
 
         <Reveal direction="right" delay={0.1}>
-          <PhotoPlaceholder label="Fresh Loom at work in a customer's home" className="aspect-[4/3] w-full" />
+          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/fresh-loom-cleaning-van-glasgow-street.webp"
+              alt="Fresh Loom Carpet Cleaning van loaded with equipment on a Glasgow street"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </Reveal>
       </div>
     </section>

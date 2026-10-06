@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronRight, Tag } from "lucide-react";
 import { siteInfo } from "@/lib/data";
-import PhotoPlaceholder from "./PhotoPlaceholder";
 
 export default function AboutHero() {
   return (
@@ -77,10 +77,16 @@ export default function AboutHero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
         >
-          <PhotoPlaceholder
-            label="Fresh Loom team or work photograph"
-            className="aspect-[4/3] w-full"
-          />
+          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/professional-cleaner-arriving-glasgow-property.webp"
+              alt="Fresh Loom Carpet Cleaning technician arriving at a Glasgow property"
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </motion.div>
       </div>
 
