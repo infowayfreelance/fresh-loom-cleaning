@@ -56,6 +56,25 @@ export type LocationContent = {
   carpetParagraphs: string[];
   carpetImage: string;
   carpetImageAlt: string;
+  introImage?: string;
+  introImageAlt?: string;
+  detailHeading?: string;
+  detailParagraphs?: string[];
+  detailImage?: string;
+  detailImageAlt?: string;
+  stainHeading?: string;
+  stainParagraphs?: string[];
+  stainImage?: string;
+  stainImageAlt?: string;
+  processImage?: string;
+  processImageAlt?: string;
+  processCaption?: string;
+  whyChooseImage?: string;
+  whyChooseImageAlt?: string;
+  resultsHeading?: string;
+  resultsIntro?: string;
+  resultsImage?: string;
+  resultsImageAlt?: string;
   localNeedsHeading: string;
   localNeedsIntro: string;
   localNeedsPoints: { title: string; description: string }[];
@@ -190,16 +209,44 @@ export default function LocationPage({ content }: { content: LocationContent }) 
 
       {/* 2. Local introduction */}
       <section className="py-16 lg:py-24">
-        <Reveal className="container-page max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-            {content.introHeading}
-          </h2>
-          <div className="space-y-4 text-slate-600">
-            {content.introParagraphs.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-          </div>
-        </Reveal>
+        <div className="container-page">
+          {content.introImage ? (
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <Reveal direction="left">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                  {content.introHeading}
+                </h2>
+                <div className="space-y-4 text-slate-600">
+                  {content.introParagraphs.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+              </Reveal>
+              <Reveal direction="right" delay={0.1}>
+                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                  <Image
+                    src={content.introImage}
+                    alt={content.introImageAlt ?? ""}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          ) : (
+            <Reveal className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                {content.introHeading}
+              </h2>
+              <div className="space-y-4 text-slate-600">
+                {content.introParagraphs.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+            </Reveal>
+          )}
+        </div>
       </section>
 
       {/* 3. Carpet Cleaning */}
@@ -261,6 +308,67 @@ export default function LocationPage({ content }: { content: LocationContent }) 
         </div>
       </section>
 
+      {/* 4b. Careful assessment / inspection detail */}
+      {content.detailImage && content.detailHeading && content.detailParagraphs ? (
+        <section className="py-16 lg:py-24 bg-light">
+          <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
+            <Reveal direction="left">
+              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src={content.detailImage}
+                  alt={content.detailImageAlt ?? ""}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+            <Reveal direction="right" delay={0.1}>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                {content.detailHeading}
+              </h2>
+              <div className="space-y-4 text-slate-600">
+                {content.detailParagraphs.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      ) : null}
+
+      {/* 4c. Stain & spot treatment */}
+      {content.stainImage && content.stainHeading && content.stainParagraphs ? (
+        <section className="py-16 lg:py-24">
+          <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
+            <Reveal direction="left">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                {content.stainHeading}
+              </h2>
+              <div className="space-y-4 text-slate-600 mb-8">
+                {content.stainParagraphs.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+              <Link href="/services/stain-removal" className="btn-accent">
+                Explore Stain Removal <ArrowUpRight size={18} />
+              </Link>
+            </Reveal>
+            <Reveal direction="right" delay={0.1}>
+              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src={content.stainImage}
+                  alt={content.stainImageAlt ?? ""}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      ) : null}
+
       {/* 5. Locally relevant cleaning needs */}
       <section className="py-16 lg:py-24 bg-light">
         <div className="container-page">
@@ -316,6 +424,25 @@ export default function LocationPage({ content }: { content: LocationContent }) 
         </div>
       </section>
 
+      {content.processImage ? (
+        <section className="pb-16 lg:pb-24">
+          <Reveal className="container-page">
+            <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-xl">
+              <Image
+                src={content.processImage}
+                alt={content.processImageAlt ?? ""}
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
+            {content.processCaption ? (
+              <p className="text-center text-sm text-slate-500 mt-4">{content.processCaption}</p>
+            ) : null}
+          </Reveal>
+        </section>
+      ) : null}
+
       {/* 7. Nearby areas */}
       <section className="py-16 lg:py-24 bg-navy-dark">
         <Reveal className="container-page max-w-2xl">
@@ -338,16 +465,44 @@ export default function LocationPage({ content }: { content: LocationContent }) 
 
       {/* 8. Why Choose Fresh Loom */}
       <section className="py-16 lg:py-24">
-        <Reveal className="container-page max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-            {content.whyChooseHeading}
-          </h2>
-          <div className="space-y-4 text-slate-600">
-            {content.whyChooseParagraphs.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-          </div>
-        </Reveal>
+        <div className="container-page">
+          {content.whyChooseImage ? (
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <Reveal direction="left">
+                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                  <Image
+                    src={content.whyChooseImage}
+                    alt={content.whyChooseImageAlt ?? ""}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+              <Reveal direction="right" delay={0.1}>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                  {content.whyChooseHeading}
+                </h2>
+                <div className="space-y-4 text-slate-600">
+                  {content.whyChooseParagraphs.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          ) : (
+            <Reveal className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                {content.whyChooseHeading}
+              </h2>
+              <div className="space-y-4 text-slate-600">
+                {content.whyChooseParagraphs.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+            </Reveal>
+          )}
+        </div>
       </section>
 
       {/* 9. Related services / internal links */}
@@ -380,6 +535,30 @@ export default function LocationPage({ content }: { content: LocationContent }) 
           </Link>
         </Reveal>
       </section>
+
+      {content.resultsImage && content.resultsHeading ? (
+        <section className="py-16 lg:py-24">
+          <div className="container-page">
+            <Reveal className="max-w-2xl mb-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
+                {content.resultsHeading}
+              </h2>
+              {content.resultsIntro ? <p className="text-slate-600">{content.resultsIntro}</p> : null}
+            </Reveal>
+            <Reveal>
+              <div className="relative w-full aspect-[3/2] md:aspect-[16/7] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src={content.resultsImage}
+                  alt={content.resultsImageAlt ?? ""}
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      ) : null}
 
       {/* 10. Gallery */}
       <section className="py-16 lg:py-24">
