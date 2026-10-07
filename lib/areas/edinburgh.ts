@@ -36,20 +36,20 @@ export const edinburgh: LocationContent = {
   ],
   detailImage: "/images/close-inspection-rug-fringe-edinburgh.webp",
   detailImageAlt: "Close inspection of a rug fringe before cleaning begins in an Edinburgh home",
-  stainHeading: "Stain & Spot Treatment",
-  stainParagraphs: [
+  secondaryHeading: "Stain & Spot Treatment",
+  secondaryParagraphs: [
     "Alongside a full carpet clean, we treat stubborn marks and stains directly, using targeted products and techniques suited to the type of stain and the carpet fibre.",
     "This spot treatment is carried out as part of a wider clean or can be requested on its own for a specific mark that's been bothering you.",
   ],
-  stainImage: "/images/carpet-stain-treatment-closeup-edinburgh.webp",
-  stainImageAlt: "Close-up of a stain being treated on a carpet with a brush and cleaning solution",
+  secondaryImage: "/images/carpet-stain-treatment-closeup-edinburgh.webp",
+  secondaryImageAlt: "Close-up of a stain being treated on a carpet with a brush and cleaning solution",
+  secondaryLinkHref: "/services/stain-removal",
+  secondaryLinkLabel: "Explore Stain Removal",
   processImage: "/images/carpet-cleaning-wand-closeup-edinburgh.webp",
   processImageAlt: "Close-up of a carpet cleaning wand in use on a carpet",
   processCaption: "Our equipment in use during a carpet clean.",
   whyChooseImage: "/images/clean-living-room-carpet-result-edinburgh.webp",
   whyChooseImageAlt: "A freshly cleaned living room carpet in an Edinburgh home",
-  resultsHeading: "See the Difference",
-  resultsIntro: "A before-and-after look at the kind of result our carpet cleaning delivers.",
   resultsImage: "/images/carpet-before-after-fireplace-edinburgh.webp",
   resultsImageAlt: "Before and after comparison of a carpet cleaned in front of a fireplace",
   localNeedsHeading: "Cleaning Needs Common Across Edinburgh Homes",
@@ -87,10 +87,7 @@ export const edinburgh: LocationContent = {
   galleryHeading: "Recent Carpet & Upholstery Cleaning Work",
   galleryIntro:
     "A look at the kind of results our carpet and upholstery cleaning delivers.",
-  galleryImages: [
-    { title: "Carpet Cleaning", image: "/images/gallery/carpet-cleaning.png" },
-    { title: "Stain Removal", image: "/images/gallery/stain-removal.png" },
-  ],
+  galleryImages: [],
   faqs: [
     {
       q: "Do you provide carpet cleaning across all of Edinburgh?",

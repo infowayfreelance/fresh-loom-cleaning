@@ -62,17 +62,17 @@ export type LocationContent = {
   detailParagraphs?: string[];
   detailImage?: string;
   detailImageAlt?: string;
-  stainHeading?: string;
-  stainParagraphs?: string[];
-  stainImage?: string;
-  stainImageAlt?: string;
+  secondaryHeading?: string;
+  secondaryParagraphs?: string[];
+  secondaryImage?: string;
+  secondaryImageAlt?: string;
+  secondaryLinkHref?: string;
+  secondaryLinkLabel?: string;
   processImage?: string;
   processImageAlt?: string;
   processCaption?: string;
   whyChooseImage?: string;
   whyChooseImageAlt?: string;
-  resultsHeading?: string;
-  resultsIntro?: string;
   resultsImage?: string;
   resultsImageAlt?: string;
   localNeedsHeading: string;
@@ -337,28 +337,30 @@ export default function LocationPage({ content }: { content: LocationContent }) 
         </section>
       ) : null}
 
-      {/* 4c. Stain & spot treatment */}
-      {content.stainImage && content.stainHeading && content.stainParagraphs ? (
+      {/* 4c. Secondary service highlight */}
+      {content.secondaryImage && content.secondaryHeading && content.secondaryParagraphs ? (
         <section className="py-16 lg:py-24">
           <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
               <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-                {content.stainHeading}
+                {content.secondaryHeading}
               </h2>
               <div className="space-y-4 text-slate-600 mb-8">
-                {content.stainParagraphs.map((p) => (
+                {content.secondaryParagraphs.map((p) => (
                   <p key={p}>{p}</p>
                 ))}
               </div>
-              <Link href="/services/stain-removal" className="btn-accent">
-                Explore Stain Removal <ArrowUpRight size={18} />
-              </Link>
+              {content.secondaryLinkHref && content.secondaryLinkLabel ? (
+                <Link href={content.secondaryLinkHref} className="btn-accent">
+                  {content.secondaryLinkLabel} <ArrowUpRight size={18} />
+                </Link>
+              ) : null}
             </Reveal>
             <Reveal direction="right" delay={0.1}>
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={content.stainImage}
-                  alt={content.stainImageAlt ?? ""}
+                  src={content.secondaryImage}
+                  alt={content.secondaryImageAlt ?? ""}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -536,15 +538,17 @@ export default function LocationPage({ content }: { content: LocationContent }) 
         </Reveal>
       </section>
 
-      {content.resultsImage && content.resultsHeading ? (
-        <section className="py-16 lg:py-24">
-          <div className="container-page">
-            <Reveal className="max-w-2xl mb-10">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
-                {content.resultsHeading}
-              </h2>
-              {content.resultsIntro ? <p className="text-slate-600">{content.resultsIntro}</p> : null}
-            </Reveal>
+      {/* 10. Results / Gallery */}
+      <section className="py-16 lg:py-24">
+        <div className="container-page">
+          <Reveal className="max-w-2xl mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
+              {content.galleryHeading}
+            </h2>
+            <p className="text-slate-600">{content.galleryIntro}</p>
+          </Reveal>
+
+          {content.resultsImage ? (
             <Reveal>
               <div className="relative w-full aspect-[3/2] md:aspect-[16/7] rounded-3xl overflow-hidden shadow-xl">
                 <Image
@@ -556,40 +560,28 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                 />
               </div>
             </Reveal>
-          </div>
-        </section>
-      ) : null}
-
-      {/* 10. Gallery */}
-      <section className="py-16 lg:py-24">
-        <div className="container-page">
-          <Reveal className="max-w-2xl mb-14">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
-              {content.galleryHeading}
-            </h2>
-            <p className="text-slate-600">{content.galleryIntro}</p>
-          </Reveal>
-
-          <StaggerGroup className="grid md:grid-cols-2 gap-8">
-            {content.galleryImages.map((item) => (
-              <StaggerItem key={item.title}>
-                <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
-                  <div className="relative w-full aspect-[2/1]">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      className="object-cover"
-                    />
+          ) : (
+            <StaggerGroup className="grid md:grid-cols-2 gap-8">
+              {content.galleryImages.map((item) => (
+                <StaggerItem key={item.title}>
+                  <div className="rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-white">
+                    <div className="relative w-full aspect-[2/1]">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="py-4 text-center font-heading font-bold text-navy-dark">
+                      {item.title}
+                    </p>
                   </div>
-                  <p className="py-4 text-center font-heading font-bold text-navy-dark">
-                    {item.title}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
+          )}
         </div>
       </section>
 
