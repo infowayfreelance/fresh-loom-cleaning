@@ -66,7 +66,7 @@ export default function CarpetHero() {
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
             src="/images/professional-carpet-cleaning-glasgow.webp"
-            alt="Professional carpet cleaning in a Glasgow home"
+            alt="Freshly cleaned carpet with clean lines visible, seen through a doorway in a Glasgow home"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
