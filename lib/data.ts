@@ -34,16 +34,6 @@ export const aboutPage = {
   },
 };
 
-export const contactPage = {
-  intro: `Have a question or ready to book your cleaning? Reach out to ${siteInfo.name} — our team is on hand to help with a fast, friendly response.`,
-  cards: [
-    { icon: "MapPin", title: "Our Address", lines: [siteInfo.address] },
-    { icon: "Phone", title: "Phone Number", lines: [siteInfo.phone] },
-    { icon: "Mail", title: "Email Address", lines: [siteInfo.email] },
-    { icon: "Clock", title: "Working Hours", lines: siteInfo.hours },
-  ],
-};
-
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
