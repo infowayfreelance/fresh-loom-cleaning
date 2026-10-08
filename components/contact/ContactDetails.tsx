@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
-import ImagePlaceholder from "../ImagePlaceholder";
+import ContactQuoteForm from "./ContactQuoteForm";
 
 const cards = [
   {
@@ -45,14 +45,14 @@ const cards = [
 
 export default function ContactDetails() {
   return (
-    <section className="py-16 lg:py-24">
+    <section id="quote-form" className="py-16 lg:py-24 scroll-mt-20">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-start">
         <Reveal direction="left">
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-10">
             Get in Touch
           </h2>
 
-          <StaggerGroup className="grid sm:grid-cols-1 gap-6">
+          <StaggerGroup className="grid gap-6">
             {cards.map((card) => (
               <StaggerItem key={card.title}>
                 <div className="flex items-start gap-4 bg-white rounded-2xl border border-black/5 shadow-sm p-6">
@@ -70,7 +70,14 @@ export default function ContactDetails() {
         </Reveal>
 
         <Reveal direction="right" delay={0.1}>
-          <ImagePlaceholder label="Fresh Loom business photograph" className="lg:sticky lg:top-24" />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
+            Request a Cleaning Quote
+          </h2>
+          <p className="text-slate-600 mb-6">
+            Tell us a little about the cleaning you need and our team can review your enquiry and
+            get back to you.
+          </p>
+          <ContactQuoteForm />
         </Reveal>
       </div>
     </section>

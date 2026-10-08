@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import ContactHero from "@/components/contact/ContactHero";
 import ContactDetails from "@/components/contact/ContactDetails";
-import ContactQuoteForm from "@/components/contact/ContactQuoteForm";
+import ContactAreasServed from "@/components/contact/ContactAreasServed";
 import WhyContactFreshLoom from "@/components/contact/WhyContactFreshLoom";
 import ContactServicesGrid from "@/components/contact/ContactServicesGrid";
-import ContactAreasServed from "@/components/contact/ContactAreasServed";
 import ContactFaq, { contactFaqs } from "@/components/contact/ContactFaq";
 import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
@@ -74,10 +73,9 @@ export default function ContactUsPage() {
 
       <ContactHero />
       <ContactDetails />
-      <ContactQuoteForm />
+      <ContactAreasServed />
       <WhyContactFreshLoom />
       <ContactServicesGrid />
-      <ContactAreasServed />
       <ContactFaq />
     </>
   );
