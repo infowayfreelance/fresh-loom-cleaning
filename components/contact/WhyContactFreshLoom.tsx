@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CalendarCheck, Layers3, MapPin } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
@@ -37,6 +38,11 @@ export default function WhyContactFreshLoom() {
             <p>
               We keep the process straightforward. Tell us what needs cleaning, provide the
               relevant details and we can discuss the most suitable service for your requirements.
+              Read more about our business on the{" "}
+              <Link href="/about-us" className="text-accent-dark font-semibold hover:underline">
+                About Us
+              </Link>{" "}
+              page.
             </p>
           </div>
         </Reveal>
