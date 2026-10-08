@@ -9,7 +9,7 @@ export default function CarpetFinalCta() {
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
         src="/images/clean-carpet-modern-glasgow-home.webp"
-        alt="Clean carpet in a modern Glasgow home"
+        alt="Close-up inspection of carpet fibres in a Glasgow home"
         fill
         sizes="100vw"
         className="object-cover"

@@ -10,7 +10,7 @@ export default function WoolCarpetSection() {
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
               src="/images/professional-wool-carpet-cleaning.webp"
-              alt="Professional wool carpet cleaning service"
+              alt="Close inspection of a textured wool carpet's fibres"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

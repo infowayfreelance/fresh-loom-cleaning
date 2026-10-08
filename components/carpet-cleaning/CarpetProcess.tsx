@@ -77,7 +77,7 @@ export default function CarpetProcess() {
           <Reveal direction="right" className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-xl hidden lg:block">
             <Image
               src="/images/carpet-cleaning-extraction-process.webp"
-              alt="Professional carpet cleaning extraction process"
+              alt="Dirty water collected in a carpet cleaning machine's extraction tank during a deep clean"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

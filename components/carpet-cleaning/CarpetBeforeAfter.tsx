@@ -6,12 +6,12 @@ const results = [
   {
     title: "Everyday Dirt & Build-Up",
     image: "/images/carpet-cleaning-dirt-before-after.webp",
-    alt: "Before and after deep carpet cleaning result",
+    alt: "Before and after comparison of a hallway carpet after deep cleaning",
   },
   {
     title: "Treated Marks",
     image: "/images/carpet-stain-treatment-before-after.webp",
-    alt: "Before and after carpet stain treatment result",
+    alt: "Before and after comparison of a carpet stain under a sofa leg after treatment",
   },
 ];
 

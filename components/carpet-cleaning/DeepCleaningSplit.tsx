@@ -11,7 +11,7 @@ export default function DeepCleaningSplit() {
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
               src="/images/deep-carpet-cleaning-living-room.webp"
-              alt="Deep carpet cleaning in a heavily used living room"
+              alt="A heavily used hallway carpet showing visible wear ahead of a deep clean"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
