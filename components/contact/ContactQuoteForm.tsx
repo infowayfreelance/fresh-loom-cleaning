@@ -2,17 +2,10 @@
 
 import { useState, FormEvent } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { services, siteInfo } from "@/lib/data";
+import { allServices, siteInfo } from "@/lib/data";
 
-export default function AppointmentForm() {
+export default function ContactQuoteForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [selected, setSelected] = useState<string[]>([]);
-
-  function toggleService(title: string) {
-    setSelected((prev) =>
-      prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
-    );
-  }
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,16 +13,17 @@ export default function AppointmentForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
     const name = data.get("name") as string;
-    const email = data.get("email") as string;
     const phone = data.get("phone") as string;
+    const email = data.get("email") as string;
+    const service = data.get("service") as string;
     const message = data.get("message") as string;
 
     const lines = [
       `Hi ${siteInfo.name}! I'd like a quote.`,
       `Name: ${name}`,
+      `Phone: ${phone}`,
       `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      selected.length ? `Services: ${selected.join(", ")}` : null,
+      service ? `Service Required: ${service}` : null,
       message ? `Message: ${message}` : null,
     ].filter(Boolean);
 
@@ -53,53 +47,49 @@ export default function AppointmentForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4 bg-white rounded-2xl shadow-sm border border-black/5 p-6 sm:p-8">
+    <form
+      onSubmit={handleSubmit}
+      className="grid gap-4 bg-white rounded-2xl shadow-sm border border-black/5 p-6 sm:p-8"
+    >
+      <input
+        required
+        name="name"
+        type="text"
+        placeholder="Name"
+        className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+      />
       <div className="grid sm:grid-cols-2 gap-4">
         <input
           required
-          name="name"
-          type="text"
-          placeholder="Your Name"
+          name="phone"
+          type="tel"
+          placeholder="Phone Number"
           className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <input
           required
           name="email"
           type="email"
-          placeholder="Your Email"
+          placeholder="Email Address"
           className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
         />
       </div>
-      <input
-        name="phone"
-        type="tel"
-        placeholder="Your Phone"
-        className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
-      />
 
-      <div>
-        <p className="font-medium text-navy-dark mb-2">Select Services</p>
-        <div className="flex flex-wrap gap-2">
-          {services.map((s) => (
-            <label
-              key={s.slug}
-              className={`cursor-pointer text-sm px-3 py-2 rounded-full border transition-colors ${
-                selected.includes(s.title)
-                  ? "bg-navy text-white border-navy"
-                  : "border-black/15 text-navy-dark hover:border-navy"
-              }`}
-            >
-              <input
-                type="checkbox"
-                className="hidden"
-                checked={selected.includes(s.title)}
-                onChange={() => toggleService(s.title)}
-              />
-              {s.title}
-            </label>
-          ))}
-        </div>
-      </div>
+      <select
+        name="service"
+        defaultValue=""
+        className="rounded-xl border border-black/10 px-4 py-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-accent"
+      >
+        <option value="" disabled>
+          Service Required
+        </option>
+        {allServices.map((s) => (
+          <option key={s.slug} value={s.title}>
+            {s.title}
+          </option>
+        ))}
+        <option value="Not sure / Other">Not sure / Other</option>
+      </select>
 
       <textarea
         name="message"
@@ -109,7 +99,7 @@ export default function AppointmentForm() {
       />
 
       <button type="submit" className="btn-accent justify-center">
-        Submit Now <ArrowUpRight size={18} />
+        Request a Quote <ArrowUpRight size={18} />
       </button>
     </form>
   );
