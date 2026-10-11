@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MessageCircle, ClipboardCheck, SprayCan, CheckCircle2 } from "lucide-react";
 import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
@@ -57,6 +58,18 @@ export default function DundeeProcess() {
             </StaggerItem>
           ))}
         </StaggerGroup>
+
+        <Reveal className="mt-10">
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/carpet-inspection-assessment-dundee.webp"
+              alt="Close inspection of a carpet before cleaning in a Dundee home"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
   );
