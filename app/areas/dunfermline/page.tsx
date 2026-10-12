@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       "Need carpet cleaning in Dunfermline? We deliver exceptional results and customer satisfaction. Call us now!",
     url: "/areas/dunfermline",
+    type: "website",
     images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
