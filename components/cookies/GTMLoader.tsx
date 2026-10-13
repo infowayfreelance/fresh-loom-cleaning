@@ -1,24 +1,13 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import Script from "next/script";
-import {
-  getAnalyticsAllowed,
-  getOptionalCookiesServerSnapshot,
-  subscribeToConsentChanges,
-} from "@/lib/cookieConsent";
 
 const GTM_ID = "GTM-TNCWZXNX";
 
+// Cookie consent gating is switched off for now (re-attach
+// getAnalyticsAllowed()/useSyncExternalStore from lib/cookieConsent if it
+// needs to come back), so this loads unconditionally.
 export default function GTMLoader() {
-  const analyticsAllowed = useSyncExternalStore(
-    subscribeToConsentChanges,
-    getAnalyticsAllowed,
-    getOptionalCookiesServerSnapshot
-  );
-
-  if (!analyticsAllowed) return null;
-
   return (
     <Script id="gtm" strategy="afterInteractive">
       {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
