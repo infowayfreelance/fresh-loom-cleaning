@@ -85,6 +85,11 @@ export type LocationContent = {
   nearbyAreas: string[];
   whyChooseHeading: string;
   whyChooseParagraphs: string[];
+  aboutLinkHref?: string;
+  aboutLinkLabel?: string;
+  otherAreasHeading?: string;
+  otherAreasIntro?: string;
+  otherAreasLinks?: { name: string; href: string }[];
   galleryHeading: string;
   galleryIntro: string;
   galleryImages: { title: string; image: string }[];
@@ -465,6 +470,31 @@ export default function LocationPage({ content }: { content: LocationContent }) 
         </Reveal>
       </section>
 
+      {/* 7b. Other Fresh Loom areas served */}
+      {content.otherAreasLinks && content.otherAreasLinks.length > 0 ? (
+        <section className="py-16 lg:py-24 bg-navy-dark border-t border-white/5">
+          <Reveal className="container-page max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+              {content.otherAreasHeading ?? `Carpet Cleaning Beyond ${content.city}`}
+            </h2>
+            {content.otherAreasIntro ? (
+              <p className="text-white/70 mb-8">{content.otherAreasIntro}</p>
+            ) : null}
+            <div className="flex flex-wrap gap-3">
+              {content.otherAreasLinks.map((area) => (
+                <Link
+                  key={area.name}
+                  href={area.href}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/90 hover:bg-white/10 hover:border-white/20 transition-colors"
+                >
+                  {area.name} <ArrowUpRight size={14} />
+                </Link>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+      ) : null}
+
       {/* 8. Why Choose Fresh Loom */}
       <section className="py-16 lg:py-24">
         <div className="container-page">
@@ -490,6 +520,14 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                     <p key={p}>{p}</p>
                   ))}
                 </div>
+                {content.aboutLinkHref && content.aboutLinkLabel ? (
+                  <Link
+                    href={content.aboutLinkHref}
+                    className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-accent-dark hover:underline"
+                  >
+                    {content.aboutLinkLabel} <ArrowUpRight size={14} />
+                  </Link>
+                ) : null}
               </Reveal>
             </div>
           ) : (
@@ -502,6 +540,14 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                   <p key={p}>{p}</p>
                 ))}
               </div>
+              {content.aboutLinkHref && content.aboutLinkLabel ? (
+                <Link
+                  href={content.aboutLinkHref}
+                  className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-accent-dark hover:underline"
+                >
+                  {content.aboutLinkLabel} <ArrowUpRight size={14} />
+                </Link>
+              ) : null}
             </Reveal>
           )}
         </div>

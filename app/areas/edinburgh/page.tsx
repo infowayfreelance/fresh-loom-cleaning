@@ -3,25 +3,23 @@ import LocationPage from "@/components/areas/LocationPage";
 import { edinburgh } from "@/lib/areas/edinburgh";
 
 export const metadata: Metadata = {
-  title: "Carpet Cleaning Edinburgh: Fresh & Clean Every Time",
-  description:
-    "Looking for top carpet cleaning in Edinburgh? Get exceptional results and restore your carpets' beauty!",
+  title: edinburgh.metaTitle,
+  description: edinburgh.metaDescription,
   alternates: {
     canonical: "/areas/edinburgh",
   },
   openGraph: {
-    title: "Carpet Cleaning Edinburgh: Fresh & Clean Every Time",
-    description:
-      "Looking for top carpet cleaning in Edinburgh? Get exceptional results and restore your carpets' beauty!",
+    title: edinburgh.metaTitle,
+    description: edinburgh.metaDescription,
     url: "/areas/edinburgh",
-    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: edinburgh.heroImage, width: 1200, height: 800 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carpet Cleaning Edinburgh: Fresh & Clean Every Time",
-    description:
-      "Looking for top carpet cleaning in Edinburgh? Get exceptional results and restore your carpets' beauty!",
-    images: ["/images/og-home.jpg"],
+    title: edinburgh.metaTitle,
+    description: edinburgh.metaDescription,
+    images: [edinburgh.heroImage],
   },
 };
 
