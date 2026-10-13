@@ -4,8 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import GTMLoader from "@/components/cookies/GTMLoader";
-import CookieConsentBanner from "@/components/cookies/CookieConsentBanner";
 import { siteInfo } from "@/lib/data";
+
+const GA_MEASUREMENT_ID = "G-3FCF7HJDT7";
 import { SITE_URL, BUSINESS_ID } from "@/lib/seo";
 import "./globals.css";
 
@@ -67,13 +68,24 @@ export default function RootLayout({
       <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(localBusinessSchema)}
       </Script>
+      {/* Google tag (gtag.js) */}
+      <Script
+        id="google-tag-gtag-js"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="beforeInteractive"
+      />
+      <Script id="google-tag-gtag-init" strategy="beforeInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');`}
+      </Script>
       <body className="min-h-full flex flex-col font-body">
         <GTMLoader />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
-        <CookieConsentBanner />
       </body>
     </html>
   );
