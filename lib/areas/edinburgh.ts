@@ -84,6 +84,17 @@ export const edinburgh: LocationContent = {
     "Fresh Loom Carpet Cleaning is built around reliable service, careful workmanship and attention to detail. Our technicians are trained and insured, and we use eco-friendly products that are safe for family homes and pets.",
     "We focus on getting the details right, from protecting your floors and furniture while we work to giving simple aftercare advice once the job is done, so you know your carpets are properly looked after.",
   ],
+  aboutLinkHref: "/about-us",
+  aboutLinkLabel: "Learn More About Fresh Loom",
+  otherAreasHeading: "Carpet Cleaning Across Scotland",
+  otherAreasIntro:
+    "Alongside Edinburgh and the Lothians, Fresh Loom also provides professional carpet cleaning in these Scottish towns and cities:",
+  otherAreasLinks: [
+    { name: "Dundee", href: "/areas/dundee" },
+    { name: "Stirling", href: "/areas/stirling" },
+    { name: "Perth", href: "/areas/perth" },
+    { name: "Dunfermline", href: "/areas/dunfermline" },
+  ],
   galleryHeading: "Recent Carpet & Upholstery Cleaning Work",
   galleryIntro:
     "A look at the kind of results our carpet and upholstery cleaning delivers.",
