@@ -99,7 +99,7 @@ export default function ServicesWeProvide() {
         <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {aboutServices.map((service) => (
             <StaggerItem key={service.slug}>
-              <Link href={`/services/${service.slug}`} className="block h-full group">
+              <Link href={`/services/${service.slug}`} prefetch={false} className="block h-full group">
                 <div className="h-full bg-white rounded-2xl border border-black/5 shadow-sm p-6 transition-shadow group-hover:shadow-md">
                   <div className="w-11 h-11 rounded-full bg-navy/10 text-navy flex items-center justify-center mb-4">
                     <service.icon size={20} />

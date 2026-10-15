@@ -28,6 +28,7 @@ export default function WhereWeServe() {
             <StaggerItem key={location.name}>
               <Link
                 href={location.href}
+                prefetch={false}
                 className="inline-flex items-center gap-2 rounded-full bg-light border border-black/5 px-5 py-2.5 text-sm font-semibold text-navy-dark hover:bg-navy hover:text-white transition-colors"
               >
                 {location.name} <ArrowUpRight size={14} />
