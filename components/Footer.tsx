@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4">Quick Links</h4>
+            <h3 className="text-white font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               {navLinks.map((l) => (
                 <li key={l.label}>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4">Our Services</h4>
+            <h3 className="text-white font-bold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm">
               {footerServiceLinks.map((s) => (
                 <li key={s}>
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4">Subscribe Now</h4>
+            <h3 className="text-white font-bold mb-4">Subscribe Now</h3>
             <p className="text-sm mb-4">Subscribe for latest update &amp; News</p>
             <NewsletterForm />
           </div>

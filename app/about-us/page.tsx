@@ -13,27 +13,29 @@ import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 
 const description = `${siteInfo.name} provides professional carpet, upholstery, sofa and rug cleaning services for homes and properties across Glasgow and surrounding areas.`;
+const metaTitle = "About Fresh Loom Carpet Cleaning";
+const metaDescription =
+  "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.";
+const ogImage = "/images/professional-cleaner-arriving-glasgow-property.webp";
 
 export const metadata: Metadata = {
-  title: "About Fresh Loom Carpet Cleaning",
-  description:
-    "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: {
     canonical: "/about-us",
   },
   openGraph: {
-    title: "About Fresh Loom Carpet Cleaning",
-    description:
-      "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.",
+    title: metaTitle,
+    description: metaDescription,
     url: "/about-us",
-    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: ogImage, width: 1200, height: 800 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Fresh Loom Carpet Cleaning",
-    description:
-      "Fresh Loom Carpet Cleaning has provided carpet, upholstery and sofa cleaning in Glasgow for over a decade. Learn about our approach and the services we provide.",
-    images: ["/images/og-home.jpg"],
+    title: metaTitle,
+    description: metaDescription,
+    images: [ogImage],
   },
 };
 
