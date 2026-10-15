@@ -17,27 +17,51 @@ export default function OurStory() {
               For over a decade, Fresh Loom Carpet Cleaning has helped customers keep their
               carpets and furnishings cleaner, fresher and more comfortable. What started as a
               focus on professional cleaning has grown into a wider service covering{" "}
-              <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services/carpet-cleaning"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 carpets
               </Link>
               ,{" "}
-              <Link href="/services/upholstery-cleaning" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services/upholstery-cleaning"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 upholstery
               </Link>
               ,{" "}
-              <Link href="/services/sofa-cleaning" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services/sofa-cleaning"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 sofas
               </Link>
               ,{" "}
-              <Link href="/services/rug-cleaning" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services/rug-cleaning"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 rugs
               </Link>
               ,{" "}
-              <Link href="/services/stain-removal" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services/stain-removal"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 stains
               </Link>
               ,{" "}
-              <Link href="/services/odour-removal" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services/odour-removal"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 odours
               </Link>{" "}
               and other specialist cleaning needs.
@@ -46,11 +70,19 @@ export default function OurStory() {
               Based in Glasgow, Fresh Loom now serves customers across Glasgow and surrounding
               areas, while continuing to focus on straightforward service, clear communication
               and attention to the condition of each property. Read more about{" "}
-              <Link href="/services" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/services"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 our cleaning services
               </Link>{" "}
               or{" "}
-              <Link href="/contact-us" className="text-accent-dark font-semibold hover:underline">
+              <Link
+                href="/contact-us"
+                prefetch={false}
+                className="text-accent-dark font-semibold hover:underline"
+              >
                 get in touch
               </Link>{" "}
               to discuss your requirements.

@@ -35,7 +35,11 @@ export default function AboutHero() {
             style={{ animationDelay: "0.15s" }}
           >
             Fresh Loom Carpet Cleaning provides{" "}
-            <Link href="/services" className="text-accent-dark font-semibold hover:underline">
+            <Link
+              href="/services"
+              prefetch={false}
+              className="text-accent-dark font-semibold hover:underline"
+            >
               professional cleaning services
             </Link>{" "}
             for homes and properties, with a focus on careful service, practical cleaning

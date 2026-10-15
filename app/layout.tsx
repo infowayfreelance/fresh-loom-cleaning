@@ -68,15 +68,19 @@ export default function RootLayout({
       <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(localBusinessSchema)}
       </Script>
-      {/* Google tag (gtag.js) — afterInteractive per Next.js's and Google's own
-          guidance for analytics: beforeInteractive blocks initial render on a
-          third-party network round-trip, which directly hurts LCP. */}
+      {/* Google tag (gtag.js) — lazyOnload, so it loads once the browser is
+          idle rather than during the Total Blocking Time measurement window
+          right after hydration (which is what afterInteractive did, and
+          where it was competing with GTM's own afterInteractive script).
+          Analytics has no UX-critical deadline, so deferring it to idle time
+          is the standard mitigation and keeps the tag reliably firing on
+          every page without costing Core Web Vitals. */}
       <Script
         id="google-tag-gtag-js"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-tag-gtag-init" strategy="afterInteractive">
+      <Script id="google-tag-gtag-init" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
