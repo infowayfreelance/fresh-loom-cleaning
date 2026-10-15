@@ -68,13 +68,15 @@ export default function RootLayout({
       <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(localBusinessSchema)}
       </Script>
-      {/* Google tag (gtag.js) */}
+      {/* Google tag (gtag.js) — afterInteractive per Next.js's and Google's own
+          guidance for analytics: beforeInteractive blocks initial render on a
+          third-party network round-trip, which directly hurts LCP. */}
       <Script
         id="google-tag-gtag-js"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
-      <Script id="google-tag-gtag-init" strategy="beforeInteractive">
+      <Script id="google-tag-gtag-init" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
