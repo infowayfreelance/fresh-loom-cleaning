@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ClipboardCheck, MapPin, MessageCircle, Phone } from "lucide-react";
 import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
@@ -36,7 +37,11 @@ export default function AreasHubProcess() {
           <p className="text-slate-600">
             Finding the right cleaning service should be straightforward. Our area pages provide
             information about the services available in each location so you can choose the option
-            that best matches your requirements.
+            that best matches your requirements. If you&apos;re not sure where to start,{" "}
+            <Link href="/contact-us" className="text-accent-dark font-semibold hover:underline">
+              contact Fresh Loom
+            </Link>{" "}
+            and we&apos;ll help.
           </p>
         </Reveal>
 

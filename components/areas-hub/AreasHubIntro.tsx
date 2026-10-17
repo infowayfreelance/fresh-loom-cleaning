@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
@@ -13,8 +14,32 @@ export default function AreasHubIntro() {
           </h2>
           <div className="space-y-4 text-slate-600 mb-8">
             <p>
-              Fresh Loom Carpet Cleaning is based in Glasgow and provides cleaning services to
-              customers across Glasgow and our established surrounding service areas.
+              Fresh Loom Carpet Cleaning is based in{" "}
+              <Link href="/" className="text-accent-dark font-semibold hover:underline">
+                Glasgow
+              </Link>{" "}
+              and provides cleaning services to customers across Glasgow and our established
+              surrounding service areas, including{" "}
+              <Link href="/areas/edinburgh" className="text-accent-dark font-semibold hover:underline">
+                Edinburgh
+              </Link>
+              ,{" "}
+              <Link href="/areas/stirling" className="text-accent-dark font-semibold hover:underline">
+                Stirling
+              </Link>
+              ,{" "}
+              <Link href="/areas/perth" className="text-accent-dark font-semibold hover:underline">
+                Perth
+              </Link>
+              ,{" "}
+              <Link href="/areas/dundee" className="text-accent-dark font-semibold hover:underline">
+                Dundee
+              </Link>{" "}
+              and{" "}
+              <Link href="/areas/dunfermline" className="text-accent-dark font-semibold hover:underline">
+                Dunfermline
+              </Link>
+              .
             </p>
             <p>
               Our local service coverage allows customers to find the cleaning services they need

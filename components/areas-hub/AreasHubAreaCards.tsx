@@ -57,7 +57,13 @@ export default function AreasHubAreaCards() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
             Our Service Areas
           </h2>
-          <p className="text-slate-600">Explore our current service areas below.</p>
+          <p className="text-slate-600">
+            Explore our current service areas below, or visit our{" "}
+            <Link href="/services" className="text-accent-dark font-semibold hover:underline">
+              cleaning services
+            </Link>{" "}
+            page to see everything we offer.
+          </p>
         </Reveal>
 
         <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

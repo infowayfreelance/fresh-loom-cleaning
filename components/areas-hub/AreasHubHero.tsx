@@ -34,9 +34,12 @@ export default function AreasHubHero() {
             className="text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
             style={{ animationDelay: "0.15s" }}
           >
-            Fresh Loom Carpet Cleaning provides professional carpet and specialist cleaning
-            services across Glasgow and selected surrounding areas. Explore our service areas
-            below to find information about the cleaning services available in your location.
+            Fresh Loom Carpet Cleaning provides professional carpet and{" "}
+            <Link href="/services" className="text-accent-dark font-semibold hover:underline">
+              specialist cleaning services
+            </Link>{" "}
+            across Glasgow and selected surrounding areas. Explore our service areas below to
+            find information about the cleaning services available in your location.
           </p>
 
           <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>

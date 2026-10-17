@@ -74,9 +74,16 @@ export default function AreasHubServices() {
             Cleaning Services Available
           </h2>
           <p className="text-slate-600">
-            Fresh Loom provides a range of cleaning services for carpets, furniture and other
-            household furnishings. The exact services available can be explored through our
-            individual service pages.
+            Fresh Loom provides a range of cleaning services for{" "}
+            <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+              carpets
+            </Link>
+            , furniture and other household furnishings. The exact services available can be
+            explored through our{" "}
+            <Link href="/services" className="text-accent-dark font-semibold hover:underline">
+              individual service pages
+            </Link>
+            .
           </p>
         </Reveal>
 

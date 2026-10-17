@@ -28,8 +28,15 @@ export default function AreasHubWhyChoose() {
           <div className="space-y-4 text-slate-600 mb-6">
             <p>
               Fresh Loom Carpet Cleaning has been providing cleaning services for over a decade. We
-              offer carpet cleaning alongside a range of specialist cleaning services for carpets,
-              upholstery and other furnishings.
+              offer{" "}
+              <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+                carpet cleaning
+              </Link>{" "}
+              alongside a range of specialist cleaning services for carpets,{" "}
+              <Link href="/services/upholstery-cleaning" className="text-accent-dark font-semibold hover:underline">
+                upholstery
+              </Link>{" "}
+              and other furnishings.
             </p>
             <p>
               Our focus is on providing a straightforward service based on the customer&apos;s
