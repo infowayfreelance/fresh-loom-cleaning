@@ -75,11 +75,14 @@ export default function Header() {
             onMouseEnter={() => setAreasHover(true)}
             onMouseLeave={() => setAreasHover(false)}
           >
-            <button
-              className="flex items-center gap-1 font-heading font-semibold text-sm uppercase tracking-wide text-navy-dark hover:text-accent transition-colors py-2"
+            <Link
+              href="/areas"
+              className={`flex items-center gap-1 font-heading font-semibold text-sm uppercase tracking-wide transition-colors py-2 ${
+                isActive("/areas") ? "text-accent" : "text-navy-dark hover:text-accent"
+              }`}
             >
               Service Areas <ChevronDown size={14} />
-            </button>
+            </Link>
             <AnimatePresence>
               {areasHover && <ServiceAreasMenu />}
             </AnimatePresence>
@@ -169,18 +172,30 @@ export default function Header() {
               )}
 
               <div>
-                <button
-                  onClick={() => setMobileAreasOpen((v) => !v)}
-                  className="w-full flex items-center justify-between py-2 font-heading font-semibold text-sm uppercase tracking-wide text-navy-dark"
-                >
-                  Service Areas
-                  <motion.span
-                    animate={{ rotate: mobileAreasOpen ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/areas"
+                    onClick={() => setOpen(false)}
+                    className={`flex-1 py-2 font-heading font-semibold text-sm uppercase tracking-wide ${
+                      isActive("/areas") ? "text-accent" : "text-navy-dark"
+                    }`}
                   >
-                    <ChevronDown size={16} />
-                  </motion.span>
-                </button>
+                    Service Areas
+                  </Link>
+                  <button
+                    aria-label="Toggle service areas submenu"
+                    onClick={() => setMobileAreasOpen((v) => !v)}
+                    className="p-2 text-navy-dark"
+                  >
+                    <motion.span
+                      animate={{ rotate: mobileAreasOpen ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="block"
+                    >
+                      <ChevronDown size={16} />
+                    </motion.span>
+                  </button>
+                </div>
                 <AnimatePresence>
                   {mobileAreasOpen && (
                     <motion.div

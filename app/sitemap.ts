@@ -3,7 +3,7 @@ import { allServices, serviceAreas } from "@/lib/data";
 import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/about-us", "/services", "/contact-us"].map((path) => ({
+  const staticRoutes = ["", "/about-us", "/services", "/areas", "/contact-us"].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
