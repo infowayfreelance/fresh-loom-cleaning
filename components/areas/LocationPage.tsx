@@ -16,6 +16,43 @@ import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
 
+// A paragraph is either plain text, or a list of segments where some
+// segments are natural in-text links to other pages on the site.
+type ParagraphSegment = string | { text: string; href: string };
+type Paragraph = string | ParagraphSegment[];
+
+function paragraphToText(paragraph: Paragraph): string {
+  if (typeof paragraph === "string") return paragraph;
+  return paragraph.map((segment) => (typeof segment === "string" ? segment : segment.text)).join("");
+}
+
+function renderParagraph(paragraph: Paragraph, key: string, className?: string) {
+  if (typeof paragraph === "string") {
+    return (
+      <p key={key} className={className}>
+        {paragraph}
+      </p>
+    );
+  }
+  return (
+    <p key={key} className={className}>
+      {paragraph.map((segment, i) =>
+        typeof segment === "string" ? (
+          <span key={i}>{segment}</span>
+        ) : (
+          <Link
+            key={i}
+            href={segment.href}
+            className="text-accent-dark font-semibold hover:underline"
+          >
+            {segment.text}
+          </Link>
+        )
+      )}
+    </p>
+  );
+}
+
 const processSteps = [
   {
     icon: ClipboardCheck,
@@ -46,24 +83,24 @@ export type LocationContent = {
   metaDescription: string;
   heroEyebrow: string;
   heroH1: string;
-  heroParagraphs: string[];
+  heroParagraphs: Paragraph[];
   heroTrustPoints: string[];
   heroImage: string;
   heroImageAlt: string;
-  introHeading: string;
-  introParagraphs: string[];
+  introHeading?: string;
+  introParagraphs?: Paragraph[];
   carpetHeading: string;
-  carpetParagraphs: string[];
+  carpetParagraphs: Paragraph[];
   carpetImage: string;
   carpetImageAlt: string;
   introImage?: string;
   introImageAlt?: string;
   detailHeading?: string;
-  detailParagraphs?: string[];
+  detailParagraphs?: Paragraph[];
   detailImage?: string;
   detailImageAlt?: string;
   secondaryHeading?: string;
-  secondaryParagraphs?: string[];
+  secondaryParagraphs?: Paragraph[];
   secondaryImage?: string;
   secondaryImageAlt?: string;
   secondaryLinkHref?: string;
@@ -77,14 +114,14 @@ export type LocationContent = {
   resultsImageAlt?: string;
   localNeedsHeading: string;
   localNeedsIntro: string;
-  localNeedsPoints: { title: string; description: string }[];
+  localNeedsPoints: { title: string; description: Paragraph }[];
   processHeading: string;
   processIntro: string;
-  nearbyHeading: string;
-  nearbyIntro: string;
-  nearbyAreas: string[];
+  nearbyHeading?: string;
+  nearbyIntro?: string;
+  nearbyAreas?: string[];
   whyChooseHeading: string;
-  whyChooseParagraphs: string[];
+  whyChooseParagraphs: Paragraph[];
   aboutLinkHref?: string;
   aboutLinkLabel?: string;
   otherAreasHeading?: string;
@@ -93,7 +130,7 @@ export type LocationContent = {
   galleryHeading: string;
   galleryIntro: string;
   galleryImages: { title: string; image: string }[];
-  faqs: { q: string; a: string }[];
+  faqs: { q: string; a: Paragraph }[];
   finalCtaEyebrow: string;
   finalCtaHeading: string;
   finalCtaParagraph: string;
@@ -124,7 +161,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
       name: faq.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.a,
+        text: paragraphToText(faq.a),
       },
     })),
   };
@@ -174,9 +211,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
               className="space-y-4 text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
               style={{ animationDelay: "0.2s" }}
             >
-              {content.heroParagraphs.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
+              {content.heroParagraphs.map((p, i) => renderParagraph(p, `hero-${i}`))}
             </div>
             <div className="flex flex-wrap gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <Link href="/contact-us" className="btn-navy">
@@ -213,46 +248,44 @@ export default function LocationPage({ content }: { content: LocationContent }) 
       </section>
 
       {/* 2. Local introduction */}
-      <section className="py-16 lg:py-24">
-        <div className="container-page">
-          {content.introImage ? (
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <Reveal direction="left">
+      {content.introHeading && content.introParagraphs ? (
+        <section className="py-16 lg:py-24">
+          <div className="container-page">
+            {content.introImage ? (
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <Reveal direction="left">
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
+                    {content.introHeading}
+                  </h2>
+                  <div className="space-y-4 text-slate-600">
+                    {content.introParagraphs.map((p, i) => renderParagraph(p, `intro-${i}`))}
+                  </div>
+                </Reveal>
+                <Reveal direction="right" delay={0.1}>
+                  <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                    <Image
+                      src={content.introImage}
+                      alt={content.introImageAlt ?? ""}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </Reveal>
+              </div>
+            ) : (
+              <Reveal className="max-w-3xl">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
                   {content.introHeading}
                 </h2>
                 <div className="space-y-4 text-slate-600">
-                  {content.introParagraphs.map((p) => (
-                    <p key={p}>{p}</p>
-                  ))}
+                  {content.introParagraphs.map((p, i) => renderParagraph(p, `intro-${i}`))}
                 </div>
               </Reveal>
-              <Reveal direction="right" delay={0.1}>
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                  <Image
-                    src={content.introImage}
-                    alt={content.introImageAlt ?? ""}
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-              </Reveal>
-            </div>
-          ) : (
-            <Reveal className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-                {content.introHeading}
-              </h2>
-              <div className="space-y-4 text-slate-600">
-                {content.introParagraphs.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
-              </div>
-            </Reveal>
-          )}
-        </div>
-      </section>
+            )}
+          </div>
+        </section>
+      ) : null}
 
       {/* 3. Carpet Cleaning */}
       <section className="py-16 lg:py-24 bg-light">
@@ -273,9 +306,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
               {content.carpetHeading}
             </h2>
             <div className="space-y-4 text-slate-600 mb-8">
-              {content.carpetParagraphs.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
+              {content.carpetParagraphs.map((p, i) => renderParagraph(p, `carpet-${i}`))}
             </div>
             <Link href="/services/carpet-cleaning" className="btn-accent">
               Explore Carpet Cleaning <ArrowUpRight size={18} />
@@ -333,9 +364,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                 {content.detailHeading}
               </h2>
               <div className="space-y-4 text-slate-600">
-                {content.detailParagraphs.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
+                {content.detailParagraphs.map((p, i) => renderParagraph(p, `detail-${i}`))}
               </div>
             </Reveal>
           </div>
@@ -351,9 +380,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                 {content.secondaryHeading}
               </h2>
               <div className="space-y-4 text-slate-600 mb-8">
-                {content.secondaryParagraphs.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
+                {content.secondaryParagraphs.map((p, i) => renderParagraph(p, `secondary-${i}`))}
               </div>
               {content.secondaryLinkHref && content.secondaryLinkLabel ? (
                 <Link href={content.secondaryLinkHref} className="btn-accent">
@@ -394,7 +421,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                     <Sparkles size={22} />
                   </div>
                   <h3 className="text-lg font-bold text-navy-dark mb-2">{point.title}</h3>
-                  <p className="text-sm text-slate-600">{point.description}</p>
+                  {renderParagraph(point.description, point.title, "text-sm text-slate-600")}
                 </div>
               </StaggerItem>
             ))}
@@ -451,24 +478,26 @@ export default function LocationPage({ content }: { content: LocationContent }) 
       ) : null}
 
       {/* 7. Nearby areas */}
-      <section className="py-16 lg:py-24 bg-navy-dark">
-        <Reveal className="container-page max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            {content.nearbyHeading}
-          </h2>
-          <p className="text-white/70 mb-8">{content.nearbyIntro}</p>
-          <div className="flex flex-wrap gap-3">
-            {content.nearbyAreas.map((area) => (
-              <span
-                key={area}
-                className="text-sm font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90"
-              >
-                {area}
-              </span>
-            ))}
-          </div>
-        </Reveal>
-      </section>
+      {content.nearbyHeading && content.nearbyAreas && content.nearbyAreas.length > 0 ? (
+        <section className="py-16 lg:py-24 bg-navy-dark">
+          <Reveal className="container-page max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+              {content.nearbyHeading}
+            </h2>
+            <p className="text-white/70 mb-8">{content.nearbyIntro}</p>
+            <div className="flex flex-wrap gap-3">
+              {content.nearbyAreas.map((area) => (
+                <span
+                  key={area}
+                  className="text-sm font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90"
+                >
+                  {area}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+      ) : null}
 
       {/* 7b. Other Fresh Loom areas served */}
       {content.otherAreasLinks && content.otherAreasLinks.length > 0 ? (
@@ -516,9 +545,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                   {content.whyChooseHeading}
                 </h2>
                 <div className="space-y-4 text-slate-600">
-                  {content.whyChooseParagraphs.map((p) => (
-                    <p key={p}>{p}</p>
-                  ))}
+                  {content.whyChooseParagraphs.map((p, i) => renderParagraph(p, `why-${i}`))}
                 </div>
                 {content.aboutLinkHref && content.aboutLinkLabel ? (
                   <Link
@@ -536,9 +563,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
                 {content.whyChooseHeading}
               </h2>
               <div className="space-y-4 text-slate-600">
-                {content.whyChooseParagraphs.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
+                {content.whyChooseParagraphs.map((p, i) => renderParagraph(p, `why-${i}`))}
               </div>
               {content.aboutLinkHref && content.aboutLinkLabel ? (
                 <Link
@@ -644,7 +669,7 @@ export default function LocationPage({ content }: { content: LocationContent }) 
             {content.faqs.map((faq) => (
               <div key={faq.q} className="rounded-xl bg-white p-5">
                 <p className="font-semibold text-navy-dark mb-2">{faq.q}</p>
-                <p className="text-sm text-slate-600">{faq.a}</p>
+                {renderParagraph(faq.a, faq.q, "text-sm text-slate-600")}
               </div>
             ))}
           </div>

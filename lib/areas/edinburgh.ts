@@ -9,36 +9,49 @@ export const edinburgh: LocationContent = {
   heroEyebrow: "Carpet Cleaning Edinburgh",
   heroH1: "Professional Carpet Cleaning in Edinburgh",
   heroParagraphs: [
-    "Fresh Loom Carpet Cleaning brings deep, professional carpet cleaning to homes and businesses across Edinburgh, from New Town flats to family houses in the suburbs.",
-    "Our team uses advanced equipment and safe cleaning methods to lift dirt, stains and allergens, leaving carpets fresher and helping them look their best for longer.",
+    [
+      "Fresh Loom Carpet Cleaning brings deep, ",
+      { text: "professional carpet cleaning", href: "/services/carpet-cleaning" },
+      " to homes and businesses across Edinburgh, from New Town flats to family houses in the suburbs.",
+    ],
+    [
+      "Our team uses advanced equipment and safe cleaning methods to lift dirt, stains and allergens, leaving carpets fresher and helping them look their best for longer. Read more ",
+      { text: "about Fresh Loom", href: "/about-us" },
+      ".",
+    ],
   ],
   heroTrustPoints: ["Trained & insured technicians", "Eco-friendly cleaning products", "Fast-drying process"],
   heroImage: "/images/carpet-cleaning-equipment-doorway-edinburgh.webp",
   heroImageAlt: "Professional carpet cleaning equipment and floor protection set up at the doorway of an Edinburgh property",
-  introHeading: "Carpet Cleaners Serving Edinburgh",
-  introParagraphs: [
-    "Edinburgh's mix of housing, from traditional tenement flats in the Old and New Towns to newer developments on the outskirts, means carpets face a wide range of everyday wear. Fresh Loom Carpet Cleaning travels to Edinburgh to provide thorough, professional carpet cleaning services for homes and businesses across the city.",
-    "Whether you need a routine deep clean, help with a stubborn stain, or a refresh ahead of a move, our team takes a careful, methodical approach suited to your carpet type and the space it's in.",
-  ],
-  introImage: "/images/carpet-cleaning-machine-hallway-edinburgh.webp",
-  introImageAlt: "Carpet cleaning machine set up in the hallway of an Edinburgh home ahead of a clean",
   carpetHeading: "Carpet Cleaning Services in Edinburgh",
   carpetParagraphs: [
-    "We provide professional carpet cleaning in Edinburgh using advanced equipment and safe cleaning methods to remove deep-down dirt, dust and allergens from all types of carpet, including wool, synthetic and berber.",
+    [
+      "We provide professional carpet cleaning in Edinburgh using advanced equipment and safe cleaning methods to remove deep-down dirt, dust and allergens from all types of carpet, including wool, synthetic and berber, as well as ",
+      { text: "area rugs", href: "/services/rug-cleaning" },
+      ".",
+    ],
     "Older Edinburgh properties, particularly stone-built tenements, can hold onto dust and moisture in their carpets over time. Our cleaning process is designed to lift this build-up while protecting fibre quality, helping carpets look and feel fresher for longer.",
   ],
   carpetImage: "/images/technician-cleaning-living-room-carpet-edinburgh.webp",
   carpetImageAlt: "Fresh Loom technician cleaning a living room carpet in an Edinburgh home",
   detailHeading: "Careful Assessment Before We Clean",
   detailParagraphs: [
-    "Before cleaning begins, we take time to look closely at the carpet or rug, checking its condition and fibres and noting any areas that need particular care.",
+    [
+      "Before cleaning begins, we take time to look closely at the carpet, rug or ",
+      { text: "upholstery", href: "/services/upholstery-cleaning" },
+      ", checking its condition and fibres and noting any areas that need particular care.",
+    ],
     "This close inspection helps us choose a cleaning approach suited to the material in front of us, rather than treating every job the same way.",
   ],
   detailImage: "/images/close-inspection-rug-fringe-edinburgh.webp",
   detailImageAlt: "Close inspection of a rug fringe before cleaning begins in an Edinburgh home",
   secondaryHeading: "Stain & Spot Treatment",
   secondaryParagraphs: [
-    "Alongside a full carpet clean, we treat stubborn marks and stains directly, using targeted products and techniques suited to the type of stain and the carpet fibre.",
+    [
+      "Alongside a full carpet clean, we treat stubborn marks and stains directly, including ",
+      { text: "pet stains", href: "/services/pet-stain-removal" },
+      ", using targeted products and techniques suited to the type of stain and the carpet fibre.",
+    ],
     "This spot treatment is carried out as part of a wider clean or can be requested on its own for a specific mark that's been bothering you.",
   ],
   secondaryImage: "/images/carpet-stain-treatment-closeup-edinburgh.webp",
@@ -58,31 +71,44 @@ export const edinburgh: LocationContent = {
   localNeedsPoints: [
     {
       title: "Tenement Flat Carpets",
-      description:
-        "Traditional tenement flats often have carpets that have been in place for years. We clean carefully around fitted carpets and skirtings without disturbing the flooring.",
+      description: [
+        "Traditional tenement flats often have carpets that have been in place for years. We clean carefully around fitted carpets and skirtings without disturbing the flooring, and offer ",
+        { text: "end of tenancy deep cleaning", href: "/services/end-of-tenancy-deep-clean" },
+        " ahead of a move.",
+      ],
     },
     {
       title: "Festival & Visitor Footfall",
-      description:
-        "Properties used for short-term lets or busy family life see higher footfall than average, which can lead to faster dirt build-up in hallways and living areas.",
+      description: [
+        "Properties used for short-term lets or busy family life see higher footfall than average, which can lead to faster dirt build-up in hallways, living areas and ",
+        { text: "sofas", href: "/services/sofa-cleaning" },
+        ".",
+      ],
     },
     {
       title: "Damp & Hard Water Marks",
-      description:
-        "Scotland's climate and Edinburgh's water can leave carpets prone to damp odours and mineral marks over time, which our treatments are designed to address.",
+      description: [
+        "Scotland's climate and Edinburgh's water can leave carpets prone to damp ",
+        { text: "odours", href: "/services/odour-removal" },
+        " and mineral marks over time, which our treatments are designed to address.",
+      ],
     },
   ],
   processHeading: "How Our Edinburgh Carpet Cleaning Works",
   processIntro:
     "A simple, straightforward process from first contact to a finished, fresher carpet.",
-  nearbyHeading: "Areas We Cover Near Edinburgh",
-  nearbyIntro:
-    "As well as central Edinburgh, we're able to travel to serve the wider Lothian area on request.",
-  nearbyAreas: ["Leith", "Portobello", "Corstorphine", "Musselburgh", "Dalkeith", "South Queensferry"],
   whyChooseHeading: "Why Choose Fresh Loom for Carpet Cleaning in Edinburgh",
   whyChooseParagraphs: [
-    "Fresh Loom Carpet Cleaning is built around reliable service, careful workmanship and attention to detail. Our technicians are trained and insured, and we use eco-friendly products that are safe for family homes and pets.",
-    "We focus on getting the details right, from protecting your floors and furniture while we work to giving simple aftercare advice once the job is done, so you know your carpets are properly looked after.",
+    [
+      "Fresh Loom Carpet Cleaning is built around reliable service, careful workmanship and attention to detail across our full range of ",
+      { text: "cleaning services", href: "/services" },
+      ". Our technicians are trained and insured, and we use eco-friendly products that are safe for family homes and pets.",
+    ],
+    [
+      "We focus on getting the details right, from protecting your floors and furniture while we work to giving simple aftercare advice once the job is done. If you have any questions, ",
+      { text: "get in touch", href: "/contact-us" },
+      " and we'll be happy to help.",
+    ],
   ],
   aboutLinkHref: "/about-us",
   aboutLinkLabel: "Learn More About Fresh Loom",
@@ -122,7 +148,11 @@ export const edinburgh: LocationContent = {
     },
     {
       q: "Can you remove stubborn stains from carpets?",
-      a: "Our stain removal treatment is effective on most tough and set-in stains, including food, drink and pet marks.",
+      a: [
+        "Our ",
+        { text: "stain removal treatment", href: "/services/stain-removal" },
+        " is effective on most tough and set-in stains, including food, drink and pet marks.",
+      ],
     },
     {
       q: "Do I need to prepare anything before you arrive?",
@@ -130,7 +160,21 @@ export const edinburgh: LocationContent = {
     },
     {
       q: "Do you offer both carpet and upholstery cleaning in Edinburgh?",
-      a: "Yes, alongside carpet cleaning we also provide upholstery, sofa, rug and stain removal services in Edinburgh.",
+      a: [
+        "Yes, alongside carpet cleaning we also provide upholstery, sofa, rug and stain removal services in Edinburgh, as well as ",
+        { text: "curtain cleaning", href: "/services/curtain-cleaning" },
+        ", ",
+        { text: "leather cleaning", href: "/services/leather-cleaning" },
+        ", ",
+        { text: "mattress cleaning", href: "/services/mattress-cleaning" },
+        ", ",
+        { text: "pet stain removal", href: "/services/pet-stain-removal" },
+        ", ",
+        { text: "odour removal", href: "/services/odour-removal" },
+        " and ",
+        { text: "end of tenancy deep cleaning", href: "/services/end-of-tenancy-deep-clean" },
+        ".",
+      ],
     },
   ],
   finalCtaEyebrow: "Get In Touch",
