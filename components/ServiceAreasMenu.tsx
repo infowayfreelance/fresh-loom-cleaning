@@ -28,18 +28,18 @@ export default function ServiceAreasMenu() {
         </div>
 
         <div className="flex flex-col items-start gap-3 bg-navy-dark px-6 py-4">
+          <Link
+            href="/areas"
+            className="inline-flex items-center gap-1 text-sm font-heading font-semibold uppercase tracking-wide text-accent hover:text-white transition-colors"
+          >
+            View All Service Areas <ArrowUpRight size={14} />
+          </Link>
           <p className="text-sm text-white/70 whitespace-nowrap">
             Call{" "}
             <a href={siteInfo.phoneHref} className="text-accent font-semibold">
               {siteInfo.phone}
             </a>
           </p>
-          <Link
-            href="/contact-us"
-            className="inline-flex items-center gap-1 text-sm font-heading font-semibold uppercase tracking-wide text-accent hover:text-white transition-colors"
-          >
-            Get a Quote <ArrowUpRight size={14} />
-          </Link>
         </div>
       </div>
     </motion.div>
