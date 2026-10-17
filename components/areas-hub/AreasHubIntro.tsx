@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
-import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function AreasHubIntro() {
   return (
@@ -57,10 +57,17 @@ export default function AreasHubIntro() {
           </div>
         </Reveal>
 
-        <Reveal direction="right" delay={0.1}>
-          <ImagePlaceholder
-            label="Glasgow base image"
-            className="relative w-full aspect-[4/3] rounded-3xl shadow-xl"
+        <Reveal
+          direction="right"
+          delay={0.1}
+          className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl"
+        >
+          <Image
+            src="/images/areas-hub/glasgow-cleaning-van-street.webp"
+            alt="A Fresh Loom cleaning van parked on a Glasgow street with a technician unloading equipment"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
           />
         </Reveal>
       </div>

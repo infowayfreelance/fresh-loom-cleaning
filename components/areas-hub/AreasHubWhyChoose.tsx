@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import Reveal from "../Reveal";
-import ImagePlaceholder from "./ImagePlaceholder";
 
 const reasons = [
   "Over a decade of cleaning experience",
@@ -14,10 +14,16 @@ export default function AreasHubWhyChoose() {
   return (
     <section className="py-16 lg:py-24">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
-        <Reveal direction="left">
-          <ImagePlaceholder
-            label="Why choose Fresh Loom image"
-            className="relative w-full aspect-[4/3] rounded-3xl shadow-xl"
+        <Reveal
+          direction="left"
+          className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl"
+        >
+          <Image
+            src="/images/areas-hub/technician-cleaning-carpet-skirting.webp"
+            alt="A Fresh Loom technician cleaning a carpet skirting edge with extraction equipment"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
           />
         </Reveal>
 

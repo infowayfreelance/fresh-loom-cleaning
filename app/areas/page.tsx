@@ -25,13 +25,19 @@ export const metadata: Metadata = {
     description,
     url: "/areas",
     type: "website",
-    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "/images/areas-hub/service-areas-map-planning.webp",
+        width: 1100,
+        height: 825,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/og-home.jpg"],
+    images: ["/images/areas-hub/service-areas-map-planning.webp"],
   },
 };
 

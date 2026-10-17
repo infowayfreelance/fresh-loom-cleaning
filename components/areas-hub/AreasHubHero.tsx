@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ChevronRight, MapPin, Phone } from "lucide-react";
 import { siteInfo } from "@/lib/data";
-import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function AreasHubHero() {
   return (
@@ -52,10 +52,17 @@ export default function AreasHubHero() {
           </div>
         </div>
 
-        <div className="hidden lg:block animate-fade-scale" style={{ animationDelay: "0.15s" }}>
-          <ImagePlaceholder
-            label="Hero image"
-            className="relative w-full aspect-[4/3] rounded-3xl shadow-xl"
+        <div
+          className="hidden lg:block relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl animate-fade-scale"
+          style={{ animationDelay: "0.15s" }}
+        >
+          <Image
+            src="/images/areas-hub/service-areas-map-planning.webp"
+            alt="A map of Fresh Loom's Scotland service areas with carpet sample swatches on a table"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+            priority
           />
         </div>
       </div>
