@@ -15,28 +15,26 @@ import UpholsteryBeforeAfter from "@/components/upholstery-cleaning/UpholsteryBe
 import UpholsteryFaq from "@/components/upholstery-cleaning/UpholsteryFaq";
 import UpholsteryFinalCta from "@/components/upholstery-cleaning/UpholsteryFinalCta";
 
+const title = "Upholstery Cleaning in Glasgow | Fresh Loom";
 const description =
-  "Professional upholstery cleaning for sofas, armchairs and fabric furniture — fabric-aware deep cleaning, stain treatment and furniture care based on material and condition.";
+  "Professional upholstery cleaning in Glasgow for sofas, armchairs and fabric furniture, with fabric-aware deep cleaning. Free quotes from Fresh Loom.";
 
 export const metadata: Metadata = {
-  title: "Restore Your Upholstery with Top Cleaning Solutions",
-  description:
-    "Tired of dull furniture? Professional upholstery cleaning brings new life. Contact us for a consultation!",
+  title,
+  description,
   alternates: {
     canonical: "/services/upholstery-cleaning",
   },
   openGraph: {
-    title: "Restore Your Upholstery with Top Cleaning Solutions",
-    description:
-      "Tired of dull furniture? Professional upholstery cleaning brings new life. Contact us for a consultation!",
+    title,
+    description,
     url: "/services/upholstery-cleaning",
     images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Restore Your Upholstery with Top Cleaning Solutions",
-    description:
-      "Tired of dull furniture? Professional upholstery cleaning brings new life. Contact us for a consultation!",
+    title,
+    description,
     images: ["/images/og-home.jpg"],
   },
 };

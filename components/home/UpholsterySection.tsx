@@ -35,9 +35,9 @@ export default function UpholsterySection() {
           <p className="text-slate-600 mb-4">
             Our professional{" "}
             <Link href="/services/upholstery-cleaning" className="text-accent-dark font-semibold hover:underline">
-              upholstery cleaning
+              upholstery cleaning in Glasgow
             </Link>{" "}
-            service helps remove built-up dirt from fabric furniture while taking care with the
+            helps remove built-up dirt from fabric furniture while taking care with the
             material being cleaned.
           </p>
           <p className="text-slate-600 mb-8">

@@ -26,8 +26,11 @@ export default function GlasgowCoverage() {
           </h2>
           <p className="text-slate-600 mb-4">
             {siteInfo.name} is a Glasgow-based carpet cleaning company providing professional
-            carpet cleaning services, along with upholstery, sofa and rug cleaning, for homes and
-            businesses across the city.
+            carpet cleaning services, along with{" "}
+            <Link href="/services/upholstery-cleaning" className="text-accent-dark font-semibold hover:underline">
+              upholstery cleaning
+            </Link>
+            , sofa and rug cleaning, for homes and businesses across the city.
           </p>
           <p className="text-slate-600 mb-4">
             Whether you need a carpet refreshed after months of everyday use, a sofa cleaned after
@@ -55,7 +58,11 @@ export default function GlasgowCoverage() {
             <Link href="/areas/dunfermline" className="text-accent-dark font-semibold hover:underline">
               Dunfermline
             </Link>
-            , for professional carpet cleaners and upholstery cleaners on request.
+            , for professional carpet cleaners and upholstery cleaners on request. See our{" "}
+            <Link href="/areas" className="text-accent-dark font-semibold hover:underline">
+              areas we serve
+            </Link>{" "}
+            page for full details of each location.
           </p>
           <Link href="/contact-us" className="btn-accent">
             Request a Quote <ArrowUpRight size={18} />

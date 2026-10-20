@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyChooseFreshLoom from "@/components/home/WhyChooseFreshLoom";
@@ -11,9 +12,10 @@ import BeforeAfterGallery from "@/components/home/BeforeAfterGallery";
 import GlasgowCoverage from "@/components/home/GlasgowCoverage";
 import HomeFaq from "@/components/home/HomeFaq";
 import FinalCta from "@/components/home/FinalCta";
+import { SITE_URL, BUSINESS_ID } from "@/lib/seo";
 const title = "Carpet Cleaning Glasgow | Fresh Loom Carpet Cleaning";
 const description =
-  "Professional carpet cleaning in Glasgow for carpets, rugs, sofas and upholstery. Contact Fresh Loom Carpet Cleaning today to request a quote.";
+  "Trusted carpet cleaning in Glasgow for carpets, rugs, sofas and upholstery, with 10+ years' experience. Request a free quote from Fresh Loom today.";
 
 export const metadata: Metadata = {
   title,
@@ -34,9 +36,29 @@ export const metadata: Metadata = {
   },
 };
 
+// Reinforces topical relevance for the homepage's primary "carpet cleaning
+// Glasgow" intent — the LocalBusiness schema in app/layout.tsx covers NAP,
+// this adds the specific service + area it's known for.
+const carpetCleaningServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Carpet Cleaning",
+  description,
+  url: SITE_URL,
+  serviceType: "Carpet Cleaning",
+  provider: { "@id": BUSINESS_ID },
+  areaServed: {
+    "@type": "City",
+    name: "Glasgow",
+  },
+};
+
 export default function Home() {
   return (
     <>
+      <Script id="home-service-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(carpetCleaningServiceSchema)}
+      </Script>
       <Hero />
       <Services />
       <WhyChooseFreshLoom />

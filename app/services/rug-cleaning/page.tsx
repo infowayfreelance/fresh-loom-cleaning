@@ -15,28 +15,26 @@ import RugBeforeAfter from "@/components/rug-cleaning/RugBeforeAfter";
 import RugFaq from "@/components/rug-cleaning/RugFaq";
 import RugFinalCta from "@/components/rug-cleaning/RugFinalCta";
 
+const title = "Rug Cleaning in Glasgow | Fresh Loom Carpet Cleaning";
 const description =
-  "Professional rug cleaning with an approach based on the rug's material and condition — deep rug cleaning, wool rug care, spot treatment and area rug cleaning.";
+  "Professional rug cleaning in Glasgow based on the rug's material — deep cleaning, wool rug care, spot treatment and area rug cleaning. Free quotes.";
 
 export const metadata: Metadata = {
-  title: "Transform Your Space with Our Rug Cleaning Solutions",
-  description:
-    "Bring your rugs back to life with our professional cleaning. Schedule a service today and enjoy freshness!",
+  title,
+  description,
   alternates: {
     canonical: "/services/rug-cleaning",
   },
   openGraph: {
-    title: "Transform Your Space with Our Rug Cleaning Solutions",
-    description:
-      "Bring your rugs back to life with our professional cleaning. Schedule a service today and enjoy freshness!",
+    title,
+    description,
     url: "/services/rug-cleaning",
     images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transform Your Space with Our Rug Cleaning Solutions",
-    description:
-      "Bring your rugs back to life with our professional cleaning. Schedule a service today and enjoy freshness!",
+    title,
+    description,
     images: ["/images/og-home.jpg"],
   },
 };
