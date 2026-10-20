@@ -8,27 +8,26 @@ import CtaBanner from "@/components/CtaBanner";
 import { allServices, siteInfo } from "@/lib/data";
 import { SITE_URL, breadcrumbSchema } from "@/lib/seo";
 
-const description = `Professional carpet, upholstery, rug, and sofa cleaning, plus stain removal, odour removal, and more across the UK. Book expert cleaning with ${siteInfo.name}.`;
+const title = "Carpet & Upholstery Cleaning Services | Fresh Loom";
+const description =
+  "Explore Fresh Loom's carpet, upholstery, rug and sofa cleaning services in Glasgow, plus stain removal and odour removal. Request a free quote.";
 
 export const metadata: Metadata = {
-  title: "Expert Cleaning Services in Glasgow",
-  description:
-    "Looking for top-notch cleaning in Glasgow? Trust our team for exceptional results. Get in touch today!",
+  title,
+  description,
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Expert Cleaning Services in Glasgow",
-    description:
-      "Looking for top-notch cleaning in Glasgow? Trust our team for exceptional results. Get in touch today!",
+    title,
+    description,
     url: "/services",
     images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Expert Cleaning Services in Glasgow",
-    description:
-      "Looking for top-notch cleaning in Glasgow? Trust our team for exceptional results. Get in touch today!",
+    title,
+    description,
     images: ["/images/og-home.jpg"],
   },
 };

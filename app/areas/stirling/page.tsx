@@ -3,25 +3,23 @@ import LocationPage from "@/components/areas/LocationPage";
 import { stirling } from "@/lib/areas/stirling";
 
 export const metadata: Metadata = {
-  title: "Stirling's Premier Carpet Cleaning for a Fresh Home",
-  description:
-    "Experience top-notch carpet cleaning in Stirling. Book your appointment today for a fresh, clean home!",
+  title: stirling.metaTitle,
+  description: stirling.metaDescription,
   alternates: {
     canonical: "/areas/stirling",
   },
   openGraph: {
-    title: "Stirling's Premier Carpet Cleaning for a Fresh Home",
-    description:
-      "Experience top-notch carpet cleaning in Stirling. Book your appointment today for a fresh, clean home!",
+    title: stirling.metaTitle,
+    description: stirling.metaDescription,
     url: "/areas/stirling",
-    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: stirling.heroImage, width: 1200, height: 800 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stirling's Premier Carpet Cleaning for a Fresh Home",
-    description:
-      "Experience top-notch carpet cleaning in Stirling. Book your appointment today for a fresh, clean home!",
-    images: ["/images/og-home.jpg"],
+    title: stirling.metaTitle,
+    description: stirling.metaDescription,
+    images: [stirling.heroImage],
   },
 };
 

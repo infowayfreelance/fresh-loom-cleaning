@@ -15,28 +15,26 @@ import CarpetBeforeAfter from "@/components/carpet-cleaning/CarpetBeforeAfter";
 import CarpetFaq from "@/components/carpet-cleaning/CarpetFaq";
 import CarpetFinalCta from "@/components/carpet-cleaning/CarpetFinalCta";
 
+const title = "Carpet Cleaning Services in Glasgow | Fresh Loom";
 const description =
-  "Professional carpet cleaning that goes beyond the surface — deep cleaning, carpet steam cleaning, stain treatment and wool carpet care, with the method chosen to suit your carpet.";
+  "Professional carpet cleaning in Glasgow — deep cleaning, steam cleaning, stain treatment and wool carpet care from Fresh Loom. Free quotes available.";
 
 export const metadata: Metadata = {
-  title: "Transform Your Home with Carpet Cleaning Experts",
-  description:
-    "Need a deep clean? Our professional carpet cleaning ensures a fresh look and feel. Learn more now!",
+  title,
+  description,
   alternates: {
     canonical: "/services/carpet-cleaning",
   },
   openGraph: {
-    title: "Transform Your Home with Carpet Cleaning Experts",
-    description:
-      "Need a deep clean? Our professional carpet cleaning ensures a fresh look and feel. Learn more now!",
+    title,
+    description,
     url: "/services/carpet-cleaning",
     images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transform Your Home with Carpet Cleaning Experts",
-    description:
-      "Need a deep clean? Our professional carpet cleaning ensures a fresh look and feel. Learn more now!",
+    title,
+    description,
     images: ["/images/og-home.jpg"],
   },
 };

@@ -3,25 +3,23 @@ import LocationPage from "@/components/areas/LocationPage";
 import { perth } from "@/lib/areas/perth";
 
 export const metadata: Metadata = {
-  title: "Carpet Cleaning Perth - Deep Clean Your Floors",
-  description:
-    "Revive your carpets with our top-notch cleaning services in Perth. Schedule your appointment now!",
+  title: perth.metaTitle,
+  description: perth.metaDescription,
   alternates: {
     canonical: "/areas/perth",
   },
   openGraph: {
-    title: "Carpet Cleaning Perth - Deep Clean Your Floors",
-    description:
-      "Revive your carpets with our top-notch cleaning services in Perth. Schedule your appointment now!",
+    title: perth.metaTitle,
+    description: perth.metaDescription,
     url: "/areas/perth",
-    images: [{ url: "/images/og-home.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: perth.heroImage, width: 1000, height: 667 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carpet Cleaning Perth - Deep Clean Your Floors",
-    description:
-      "Revive your carpets with our top-notch cleaning services in Perth. Schedule your appointment now!",
-    images: ["/images/og-home.jpg"],
+    title: perth.metaTitle,
+    description: perth.metaDescription,
+    images: [perth.heroImage],
   },
 };
 
