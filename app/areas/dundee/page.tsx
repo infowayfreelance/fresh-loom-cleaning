@@ -12,33 +12,38 @@ import DundeeFaq, { dundeeFaqs } from "@/components/dundee/DundeeFaq";
 import DundeeFinalCta from "@/components/dundee/DundeeFinalCta";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 
+const title = "Carpet Cleaning Dundee | Fresh Loom";
 const description =
-  "Professional carpet cleaning in Dundee from Fresh Loom Carpet Cleaning. Straightforward carpet cleaners serving homes and properties across Dundee and selected surrounding areas.";
+  "Professional carpet cleaning in Dundee. Fresh Loom offers reliable carpet cleaning services for homes and properties. Get a quote today.";
+const ogImage = "/images/carpet-cleaning-dundee-waterfront-view-og.jpg";
 
 export const metadata: Metadata = {
-  title: "Carpet Cleaning Dundee | Fresh Loom Carpet Cleaning",
+  title,
   description,
   alternates: {
     canonical: "/areas/dundee",
   },
   openGraph: {
-    title: "Carpet Cleaning Dundee | Fresh Loom Carpet Cleaning",
+    title,
     description,
     url: "/areas/dundee",
     type: "website",
+    siteName: "Fresh Loom Carpet Cleaning",
     images: [
       {
-        url: "/images/carpet-cleaning-dundee-waterfront-view.webp",
+        url: ogImage,
         width: 1400,
         height: 788,
+        type: "image/jpeg",
+        alt: "Carpet cleaning in a Dundee home overlooking the Tay",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carpet Cleaning Dundee | Fresh Loom Carpet Cleaning",
+    title,
     description,
-    images: ["/images/carpet-cleaning-dundee-waterfront-view.webp"],
+    images: [ogImage],
   },
 };
 
@@ -52,7 +57,7 @@ const serviceSchema = {
   provider: { "@id": BUSINESS_ID },
   areaServed: {
     "@type": "City",
-    name: "Dundee",
+    name: "Dundee, Scotland, United Kingdom",
   },
 };
 
@@ -71,6 +76,7 @@ const faqSchema = {
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Home", path: "/" },
+  { name: "Areas", path: "/areas" },
   { name: "Dundee", path: "/areas/dundee" },
 ]);
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
@@ -33,8 +34,12 @@ export default function DundeeServiceOverview() {
             Our Carpet Cleaning Service
           </h2>
           <p className="text-slate-600 mb-6">
-            Our carpet cleaning service is suitable for homes and properties where carpets need a
-            deeper clean than normal household maintenance can provide.
+            Our{" "}
+            <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+              carpet cleaning service
+            </Link>{" "}
+            is suitable for homes and properties where carpets need a deeper clean than normal
+            household maintenance can provide.
           </p>
           <p className="text-slate-600 mb-4">We can help with carpets affected by:</p>
 
@@ -52,8 +57,11 @@ export default function DundeeServiceOverview() {
           </StaggerGroup>
 
           <p className="text-sm text-slate-500">
-            Results can vary depending on the carpet material, condition, type of stain and how
-            long the problem has been present. We do not promise that every stain can be
+            Results can vary depending on the carpet material, condition, type of{" "}
+            <Link href="/services/stain-removal" className="text-accent-dark font-semibold hover:underline">
+              stain
+            </Link>{" "}
+            and how long the problem has been present. We do not promise that every stain can be
             completely removed.
           </p>
         </Reveal>

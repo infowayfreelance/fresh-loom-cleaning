@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Reveal from "../Reveal";
 
+const linkClass = "text-accent-dark font-semibold hover:underline";
+
 export const dundeeFaqs = [
   {
     q: "Do you provide carpet cleaning in Dundee?",
@@ -13,7 +15,6 @@ export const dundeeFaqs = [
   {
     q: "Can you remove pet stains from carpets?",
     a: "Fresh Loom provides pet stain removal as a separate service. The result depends on the type and age of the stain and the condition of the carpet.",
-    link: { href: "/services/pet-stain-removal", label: "Learn more about pet stain removal" },
   },
   {
     q: "Do you clean stairs and hallways?",
@@ -40,20 +41,73 @@ export default function DundeeFaq() {
         </Reveal>
 
         <div className="space-y-3">
-          {dundeeFaqs.map((faq) => (
-            <div key={faq.q} className="rounded-xl bg-white p-5">
-              <h3 className="font-semibold text-navy-dark mb-2">{faq.q}</h3>
-              <p className="text-sm text-slate-600">{faq.a}</p>
-              {faq.link ? (
-                <Link
-                  href={faq.link.href}
-                  className="inline-block mt-2 text-sm font-semibold text-accent-dark hover:underline"
-                >
-                  {faq.link.label}
-                </Link>
-              ) : null}
-            </div>
-          ))}
+          <div className="rounded-xl bg-white p-5">
+            <h3 className="font-semibold text-navy-dark mb-2">{dundeeFaqs[0].q}</h3>
+            <p className="text-sm text-slate-600">{dundeeFaqs[0].a}</p>
+          </div>
+
+          <div className="rounded-xl bg-white p-5">
+            <h3 className="font-semibold text-navy-dark mb-2">{dundeeFaqs[1].q}</h3>
+            <p className="text-sm text-slate-600">
+              Professional{" "}
+              <Link href="/services/carpet-cleaning" className={linkClass}>
+                carpet cleaning
+              </Link>{" "}
+              can help remove accumulated dirt, soil and suitable stains from carpets. Results
+              depend on the carpet material, condition and type of stain.
+            </p>
+          </div>
+
+          <div className="rounded-xl bg-white p-5">
+            <h3 className="font-semibold text-navy-dark mb-2">{dundeeFaqs[2].q}</h3>
+            <p className="text-sm text-slate-600">{dundeeFaqs[2].a}</p>
+            <Link href="/services/pet-stain-removal" className={`inline-block mt-2 ${linkClass}`}>
+              Learn more about pet stain removal
+            </Link>
+          </div>
+
+          <div className="rounded-xl bg-white p-5">
+            <h3 className="font-semibold text-navy-dark mb-2">{dundeeFaqs[3].q}</h3>
+            <p className="text-sm text-slate-600">{dundeeFaqs[3].a}</p>
+          </div>
+
+          <div className="rounded-xl bg-white p-5">
+            <h3 className="font-semibold text-navy-dark mb-2">{dundeeFaqs[4].q}</h3>
+            <p className="text-sm text-slate-600">
+              Contact Fresh Loom by phone or use the{" "}
+              <Link href="/contact-us" className={linkClass}>
+                website enquiry form
+              </Link>{" "}
+              to explain what you need cleaned and request a quote.
+            </p>
+          </div>
+
+          <div className="rounded-xl bg-white p-5">
+            <h3 className="font-semibold text-navy-dark mb-2">{dundeeFaqs[5].q}</h3>
+            <p className="text-sm text-slate-600">
+              Fresh Loom provides several cleaning services, including{" "}
+              <Link href="/services/upholstery-cleaning" className={linkClass}>
+                upholstery
+              </Link>
+              ,{" "}
+              <Link href="/services/sofa-cleaning" className={linkClass}>
+                sofa
+              </Link>
+              ,{" "}
+              <Link href="/services/rug-cleaning" className={linkClass}>
+                rug
+              </Link>
+              ,{" "}
+              <Link href="/services/stain-removal" className={linkClass}>
+                stain
+              </Link>{" "}
+              and{" "}
+              <Link href="/services/pet-stain-removal" className={linkClass}>
+                pet stain
+              </Link>{" "}
+              cleaning. Availability depends on the service area.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -45,7 +45,11 @@ export default function DundeeOtherServices() {
             Other Cleaning Services
           </h2>
           <p className="text-slate-600">
-            If you need more than carpet cleaning, Fresh Loom also provides:
+            If you need more than{" "}
+            <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+              carpet cleaning
+            </Link>
+            , Fresh Loom also provides:
           </p>
         </Reveal>
 
