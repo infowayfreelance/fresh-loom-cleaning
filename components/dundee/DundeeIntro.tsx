@@ -15,10 +15,16 @@ export default function DundeeIntro() {
             routine.
           </p>
           <p>
-            Fresh Loom Carpet Cleaning provides a professional carpet cleaning service for
-            customers in Dundee and the surrounding areas. We focus on the areas that need
-            attention while keeping the cleaning process straightforward from enquiry to
-            completion.
+            Fresh Loom Carpet Cleaning provides a professional{" "}
+            <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+              carpet cleaning service
+            </Link>{" "}
+            for customers in Dundee and our{" "}
+            <Link href="/areas" className="text-accent-dark font-semibold hover:underline">
+              surrounding service areas
+            </Link>
+            . We focus on the areas that need attention while keeping the cleaning process
+            straightforward from enquiry to completion.
           </p>
           <p>
             If you are looking for carpet cleaners in Dundee,{" "}

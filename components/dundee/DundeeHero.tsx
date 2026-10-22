@@ -16,6 +16,10 @@ export default function DundeeHero() {
               Home
             </Link>
             <ChevronRight size={14} />
+            <Link href="/areas" className="hover:text-accent transition-colors">
+              Areas
+            </Link>
+            <ChevronRight size={14} />
             <span className="text-accent">Dundee</span>
           </div>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CalendarCheck, Layers3, MapPin, MessageCircle } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
@@ -21,13 +22,24 @@ export default function DundeeWhyChoose() {
           <div className="space-y-4 text-slate-600 mb-10">
             <p>{siteInfo.name} has been providing cleaning services for over a decade.</p>
             <p>
-              We offer a range of specialist cleaning services rather than focusing only on
-              carpets, allowing customers to find suitable cleaning options for carpets,
-              upholstery and other furnishings.
+              We offer a range of specialist cleaning services rather than focusing only on{" "}
+              <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+                carpets
+              </Link>
+              , allowing customers to find suitable cleaning options for carpets,{" "}
+              <Link href="/services/upholstery-cleaning" className="text-accent-dark font-semibold hover:underline">
+                upholstery
+              </Link>{" "}
+              and other furnishings.
             </p>
             <p>
               Our approach is simple: understand what needs cleaning, provide the appropriate
-              service and keep communication clear throughout the process.
+              service and keep communication clear throughout the process. Read more about our
+              approach on our{" "}
+              <Link href="/about-us" className="text-accent-dark font-semibold hover:underline">
+                About Us
+              </Link>{" "}
+              page.
             </p>
           </div>
         </Reveal>

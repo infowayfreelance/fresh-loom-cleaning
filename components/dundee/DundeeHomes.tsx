@@ -23,9 +23,12 @@ export default function DundeeHomes() {
             Carpet Cleaning for Dundee Homes
           </h2>
           <p className="text-slate-600 mb-6">
-            Every property has different cleaning requirements. Fresh Loom provides carpet
-            cleaning for customers across Dundee, whether you need individual rooms refreshed or
-            several carpeted areas cleaned.
+            Every property has different cleaning requirements. Fresh Loom provides{" "}
+            <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
+              carpet cleaning
+            </Link>{" "}
+            for customers across Dundee, whether you need individual rooms refreshed or several
+            carpeted areas cleaned.
           </p>
           <p className="text-slate-600 mb-4">Our service can be suitable for:</p>
 

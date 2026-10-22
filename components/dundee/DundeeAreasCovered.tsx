@@ -19,12 +19,24 @@ export default function DundeeAreasCovered() {
             Carpet Cleaning Across Dundee
           </h2>
           <div className="space-y-4 text-white/70 mb-8">
-            <p>Fresh Loom serves customers in Dundee and selected surrounding areas.</p>
+            <p>
+              Fresh Loom serves customers in Dundee and{" "}
+              <Link href="/areas" className="font-semibold text-white hover:underline">
+                selected surrounding areas
+              </Link>
+              .
+            </p>
             <p>
               For customers looking for carpet cleaning in Dundee, our service is available for
               residential cleaning requirements across the city.
             </p>
-            <p>If you are outside Dundee, you can also explore our other service areas:</p>
+            <p>
+              If you are outside Dundee, you can also explore our{" "}
+              <Link href="/areas" className="font-semibold text-white hover:underline">
+                other service areas
+              </Link>
+              :
+            </p>
           </div>
           <div className="flex flex-wrap gap-3">
             {otherAreas.map((area) => (
