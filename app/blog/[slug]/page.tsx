@@ -5,7 +5,8 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
-import { blogPosts, formatBlogDate, getBlogPost } from "@/lib/blog";
+import BlogContent from "@/components/blog/BlogContent";
+import { blogPosts, formatBlogDate, getBlogPost, getBlogPostFaqs } from "@/lib/blog";
 import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 
@@ -35,7 +36,7 @@ export async function generateMetadata({
       description: post.excerpt,
       url: `/blog/${slug}`,
       type: "article",
-      images: [{ url: post.image, width: 1200, height: 800 }],
+      images: [{ url: post.image, width: post.imageWidth, height: post.imageHeight }],
     },
     twitter: {
       card: "summary_large_image",
@@ -75,11 +76,30 @@ export default async function BlogPostPage({
     { name: post.title, path: `/blog/${slug}` },
   ]);
 
+  const faqs = getBlogPostFaqs(post);
+  const faqSchema =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: { "@type": "Answer", text: faq.a },
+          })),
+        }
+      : null;
+
   return (
     <>
       <Script id="blog-post-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(articleSchema)}
       </Script>
+      {faqSchema ? (
+        <Script id="blog-post-faq-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(faqSchema)}
+        </Script>
+      ) : null}
       <Script id="blog-post-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(breadcrumbs)}
       </Script>
@@ -117,23 +137,10 @@ export default async function BlogPostPage({
       </section>
 
       <article className="py-16 lg:py-24">
-        <div className="container-page max-w-3xl space-y-10">
-          {post.content.map((section, i) => (
-            <div key={section.heading ?? i}>
-              {section.heading ? (
-                <h2 className="text-2xl md:text-3xl font-extrabold text-navy-dark mb-4">
-                  {section.heading}
-                </h2>
-              ) : null}
-              <div className="space-y-4 text-slate-600">
-                {section.paragraphs.map((paragraph, pi) => (
-                  <p key={pi}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="container-page max-w-3xl">
+          <BlogContent sections={post.content} />
 
-          <div className="pt-6 border-t border-black/5">
+          <div className="pt-10 mt-10 border-t border-black/5">
             <Link href="/blog" className="font-semibold text-accent-dark hover:underline">
               ← Back to Blog
             </Link>
