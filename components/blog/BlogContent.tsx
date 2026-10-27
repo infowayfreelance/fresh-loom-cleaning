@@ -116,6 +116,37 @@ function BlockRenderer({ section }: { section: BlogPostSection }) {
                 </div>
               );
 
+            case "table":
+              return (
+                <div key={i} className="overflow-x-auto rounded-xl border border-black/5">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-light">
+                        {block.headers.map((header, hi) => (
+                          <th
+                            key={hi}
+                            className="text-left font-bold text-navy-dark p-3 border-b border-black/5"
+                          >
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, ri) => (
+                        <tr key={ri} className={ri % 2 === 1 ? "bg-light/50" : undefined}>
+                          {row.map((cell, ci) => (
+                            <td key={ci} className="p-3 align-top border-b border-black/5 last:border-b-0">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+
             default:
               return null;
           }
