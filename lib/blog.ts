@@ -840,6 +840,431 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-remove-mud-stains-from-carpet",
+    title: "How to Remove Mud Stains from Carpet: 7 Steps",
+    excerpt:
+      "How to remove mud stains from carpet: let it dry, vacuum, blot with a safe cleaner and avoid the mistakes that set the stain.",
+    date: "2026-10-29",
+    image: "/images/blog/muddy-footprints-trailing-across-carpet.webp",
+    imageAlt: "Muddy footprints trailing across a carpet near an open front door, with a vacuum cleaner nearby",
+    imageWidth: 1200,
+    imageHeight: 800,
+    content: [
+      {
+        blocks: [
+          {
+            type: "paragraph",
+            text: "One muddy footprint can leave a brown patch that spreads the moment you rub it. Pick the wrong cleaner and the stain can return, or the colour can bleed.",
+          },
+          {
+            type: "paragraph",
+            text: "This guide shows how to remove mud stains from carpet in seven steps. You will see which cleaners carpet makers advise against, and when to stop.",
+          },
+        ],
+      },
+      {
+        heading: "How to Remove Mud Stains from Carpet: The Short Answer",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Let the mud dry, vacuum it up slowly, then blot the mark with a carpet-safe cleaner and dry the carpet. Wet mud smears, so wait before you clean.",
+          },
+          {
+            type: "orderedList",
+            items: [
+              "Lift loose lumps with a spoon.",
+              "Let the rest dry.",
+              "Vacuum slowly.",
+              "Choose a safe cleaner and patch test it.",
+              "Blot from the outside in.",
+              "Rinse with a damp cloth.",
+              "Dry the carpet with a fan and open windows.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "What Do You Need to Clean Mud from Carpet?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "You need a vacuum, a spoon, clean cloths and a carpet-safe cleaner to get mud out of carpet. Gather them before you start.",
+          },
+          {
+            type: "list",
+            items: [
+              "A vacuum with a hose attachment",
+              "A spoon, or the edge of a credit card",
+              "A soft brush, such as a toothbrush",
+              "White or neutral cloths and kitchen roll",
+              "A carpet stain remover, or a WoolSafe Approved carpet shampoo for wool",
+              "A fan",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "How Do You Remove Dried Mud from Carpet?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Follow these seven steps in order, and patch test before any liquid touches the carpet.",
+          },
+          { type: "subheading", text: "1. Lift the Loose Mud" },
+          {
+            type: "paragraph",
+            text: "Scoop wet lumps gently with a spoon, the edge of a credit card or a dull palette knife. Shark's cleaning guide warns against pressing them further into the fibres.",
+          },
+          {
+            type: "paragraph",
+            text: "Blot surface wetness with kitchen roll, but do not rub.",
+          },
+          {
+            type: "image",
+            src: "/images/blog/scooping-mud-clumps-with-spoon-carpet.webp",
+            alt: "Scooping loose mud clumps off a carpet with a spoon",
+            aspect: "3 / 2",
+          },
+          { type: "subheading", text: "2. Let the Rest Dry" },
+          {
+            type: "paragraph",
+            text: "Homes & Gardens (October 2023) says to wait about 24 hours. Scrubbing wet mud spreads the stain and pushes it deeper.",
+          },
+          {
+            type: "paragraph",
+            text: "Cleanipedia (October 2023) suggests placing a fan beside the patch to speed up drying.",
+          },
+          {
+            type: "image",
+            src: "/images/blog/fan-drying-carpet-patch-after-stain.webp",
+            alt: "A fan placed beside a carpet patch to speed up drying",
+            aspect: "3 / 2",
+          },
+          { type: "subheading", text: "3. Vacuum Slowly" },
+          {
+            type: "paragraph",
+            text: "Hold the hose just above the carpet and move slowly, as In the Wash (August 2023) advises. Loosen stuck mud first with a soft brush.",
+          },
+          {
+            type: "paragraph",
+            text: "Gtech (July 2025) suggests passing over the spot at least 16 times, back and forth and side to side. If lumps remain, scrape them gently with a spoon and vacuum again.",
+          },
+          { type: "subheading", text: "4. Choose a Safe Cleaner and Patch Test" },
+          {
+            type: "paragraph",
+            text: "Check your carpet's care label or the maker's guide first. Then test the cleaner on a hidden patch, such as a corner or the area under furniture.",
+          },
+          {
+            type: "paragraph",
+            text: "Gtech allows five minutes for the test. The next section compares your options.",
+          },
+          { type: "subheading", text: "5. Blot the Stain From the Outside In" },
+          {
+            type: "paragraph",
+            text: "Apply a small amount of cleaner to a white cloth, not straight onto the carpet. Cormar and Ulster Carpets both give this advice in their care guides.",
+          },
+          {
+            type: "paragraph",
+            text: "Dab from the edge of the stain towards the centre. Blot, never rub.",
+          },
+          {
+            type: "paragraph",
+            text: "Ulster Carpets says two or three light applications work better than one heavy one. It also says to lift as much soil as you can before using any spotter.",
+          },
+          {
+            type: "image",
+            src: "/images/blog/blotting-mud-stain-with-white-towel.webp",
+            alt: "Blotting a mud stain on a carpet with a white towel",
+            aspect: "3 / 2",
+          },
+          { type: "subheading", text: "6. Rinse With a Damp Cloth" },
+          {
+            type: "paragraph",
+            text: "Blot with a fresh cloth dampened with clean water to lift leftover cleaner, as Homes & Gardens advises. Ulster Carpets says to rinse water-based spotters thoroughly with clean water.",
+          },
+          { type: "subheading", text: "7. Dry the Carpet and Finish" },
+          {
+            type: "paragraph",
+            text: "Blot the patch dry, open a window and run a fan. In the Wash advises keeping people and pets off the carpet until it dries.",
+          },
+          {
+            type: "paragraph",
+            text: "Homes & Gardens warns that a carpet left damp for long is more likely to grow mould. Vacuum once dry to lift the pile, as Shark suggests.",
+          },
+        ],
+      },
+      {
+        heading: "What Should You Use to Clean Mud Stains?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Use a carpet stain remover or, for wool, a WoolSafe Approved shampoo, because carpet makers advise against washing-up liquid.",
+          },
+          {
+            type: "paragraph",
+            text: "Cormar's wool care guide says not to use dishwashing liquids, soaps or other general household cleaners. It says they can cause rapid re-soiling, colour bleeding and bleaching.",
+          },
+          {
+            type: "paragraph",
+            text: "Ulster Carpets' after-care guide goes further and says never to use washing-up liquid. It warns of sticky residue, quick re-soiling, pile damage and bleeding colours.",
+          },
+          {
+            type: "paragraph",
+            text: "Most online mud guides still use it. Homes & Gardens, Shark and In the Wash all mix washing-up liquid with water.",
+          },
+          {
+            type: "table",
+            headers: ["Cleaner", "Suggested by", "Watch out for"],
+            rows: [
+              ["Carpet stain remover", "Cormar, Ulster Carpets", "Test first, and apply it to a cloth"],
+              [
+                "WoolSafe Approved shampoo",
+                "Cormar, Ulster Carpets",
+                "Check the approval mark on the pack",
+              ],
+              [
+                "Diluted washing-up liquid",
+                "Homes & Gardens, Shark, In the Wash",
+                "Both carpet makers advise against it",
+              ],
+              ["Laundry detergent", "Cleanipedia", "Test first, and rinse thoroughly"],
+              [
+                "White vinegar and water",
+                "Gtech, In the Wash, Cleanipedia",
+                "Test for colour change, and ventilate the room",
+              ],
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Cormar's guide does not mention vinegar, so patch test it first. Water temperature also varies: Shark advises cool water, while Homes & Gardens uses warm water and warns against hot.",
+          },
+          {
+            type: "paragraph",
+            text: "For mud on a wool carpet, Cormar's stain chart says to vacuum thoroughly when dry. It then says to blot with a WoolSafe Approved carpet shampoo on a cloth, and again with a clean white cloth.",
+          },
+          {
+            type: "paragraph",
+            text: "WoolSafe runs a scheme of approved products and service providers for wool carpets.",
+          },
+        ],
+      },
+      {
+        heading: "Can You Clean Wet Mud Straight Away?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "No, avoid cleaning wet mud on carpet, because it smears and sinks deeper. Lift the lumps, then let the rest dry.",
+          },
+          {
+            type: "paragraph",
+            text: "Cleanipedia says wet mud spreads and is harder to remove. Homes & Gardens says the same about scrubbing it.",
+          },
+          {
+            type: "paragraph",
+            text: "Do not vacuum wet mud. The UK Health Security Agency (UKHSA) says not to use normal vacuums on wet surfaces. A 2017 Mumsnet thread shows the worry: one parent feared wet mud would break their vacuum.",
+          },
+          {
+            type: "paragraph",
+            text: "Use white kitchen roll to blot surface wetness. Coloured cloths can transfer dye, Homes & Gardens warns.",
+          },
+        ],
+      },
+      {
+        heading: "How Do You Remove Set-In or Stubborn Mud Stains?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Repeat light treatments and rinse well, because heavy scrubbing or soaking makes a mud stain worse.",
+          },
+          {
+            type: "paragraph",
+            text: "Prolux Cleaning (December 2024) suggests a stain remover and a gentle scrub with a soft-bristled brush. Then it says to rinse with clean water, blot and dry the area fully.",
+          },
+          {
+            type: "paragraph",
+            text: "In the Wash lists a rented carpet cleaner for stubborn marks. Homes & Gardens says to rinse thoroughly after any carpet cleaner.",
+          },
+          {
+            type: "paragraph",
+            text: [
+              "If the mark stays, a specialist ",
+              { text: "stain removal", href: "/services/stain-removal" },
+              " treatment or ",
+              { text: "professional carpet cleaning", href: "/services/carpet-cleaning" },
+              " may suit better.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "What About Muddy Paw Prints?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Treat muddy paw prints like muddy footprints, then spray equal parts white vinegar and water, according to Cleanipedia (October 2023). Vinegar helps remove animal odour, and its smell fades as it dries.",
+          },
+          {
+            type: "paragraph",
+            text: "If a smell lingers, Cleanipedia suggests sprinkling baking soda overnight and vacuuming it up in the morning.",
+          },
+          {
+            type: "paragraph",
+            text: [
+              "Persistent marks or smells may need specialist ",
+              { text: "pet stain removal", href: "/services/pet-stain-removal" },
+              " or ",
+              { text: "odour removal", href: "/services/odour-removal" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Is It Flood Mud or Garden Mud?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Flood mud needs more care than garden mud, because floodwater can contain sewage and pollutants.",
+          },
+          {
+            type: "paragraph",
+            text: "The UKHSA's flood-recovery advice says to wear waterproof gloves and boots, and to wash your hands after each clean-up session. It says carpets and soft furnishings are porous, and flooding can damage them badly.",
+          },
+          {
+            type: "paragraph",
+            text: "It tells residents to decide whether to discard or clean them. It also says to check with your insurer before discarding a carpet.",
+          },
+        ],
+      },
+      {
+        heading: "Mistakes That Make Mud Stains Worse",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Cleaning too early, rubbing and soaking cause most mud stain problems.",
+          },
+          {
+            type: "table",
+            headers: ["Mistake", "Why it hurts", "Do this instead"],
+            rows: [
+              ["Cleaning wet mud", "It spreads and sinks deeper", "Lift lumps, then let it dry"],
+              ["Rubbing the stain", "It pushes mud into the pile", "Blot from the outside in"],
+              ["Vacuuming too fast", "It leaves soil behind", "Move slowly, hose just above the carpet"],
+              [
+                "Spraying or soaking",
+                "It can spread the stain and slow drying",
+                "Apply cleaner to a cloth",
+              ],
+              ["Using coloured cloths", "They can transfer dye", "Use white or neutral cloths"],
+              [
+                "Skipping the patch test",
+                "The cleaner may mark the carpet",
+                "Test on a hidden spot first",
+              ],
+              ["Leaving the carpet damp", "Damp carpet can grow mould", "Run a fan and open a window"],
+            ],
+          },
+        ],
+      },
+      {
+        heading: "How Do You Stop Mud Stains Coming Back?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Stop mud at the door, because walk-off mats and a no-shoes rule catch most of it.",
+          },
+          {
+            type: "paragraph",
+            text: "Cleanipedia and Bissell both suggest door mats, a no-shoes policy and regular vacuuming. Cleanipedia adds rugs or runners in high-traffic areas.",
+          },
+          {
+            type: "paragraph",
+            text: [
+              "Mats and runners get dirty too, so clean them regularly. Delicate pieces may need specialist ",
+              { text: "rug cleaning", href: "/services/rug-cleaning" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "When Should You Call a Professional?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Call a professional when the mud covers a large area, has set for a long time, or sits on a delicate carpet.",
+          },
+          {
+            type: "paragraph",
+            text: "Cormar advises calling a professional for extensive stains. Ulster Carpets points to a WoolSafe Approved Service Provider for extensive or set-in stains.",
+          },
+          {
+            type: "paragraph",
+            text: [
+              "Mud on a sofa needs the same wait-and-vacuum approach, plus a check of the care label, according to Bissell. Fabric-specific ",
+              { text: "sofa cleaning", href: "/services/sofa-cleaning" },
+              " or ",
+              { text: "upholstery cleaning", href: "/services/upholstery-cleaning" },
+              " may suit better.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Frequently Asked Questions",
+        blocks: [
+          {
+            type: "faq",
+            items: [
+              {
+                q: "Should I let mud dry before cleaning carpet?",
+                a: "Yes, let it dry first. Homes & Gardens (October 2023) says to wait about 24 hours, and Cleanipedia says a fan can speed this up.",
+              },
+              {
+                q: "Can I use vinegar on a mud stain?",
+                a: "Yes on many carpets, but patch test first. Gtech (July 2025) and In the Wash (August 2023) both use white vinegar and water, and Cormar's guide does not mention vinegar.",
+              },
+              {
+                q: "Can I use washing-up liquid on carpet?",
+                a: "Many guides do, but check your carpet maker's advice first. Cormar and Ulster Carpets both advise against it, because it can leave residue and cause quick re-soiling.",
+              },
+              {
+                q: "How do I get mud out of wool carpet?",
+                a: "Vacuum thoroughly when dry, then blot with a WoolSafe Approved carpet shampoo on a cloth, as Cormar's stain chart advises. Test first, and call a WoolSafe Approved Service Provider for extensive stains.",
+              },
+              {
+                q: "Can mud stains be permanent?",
+                a: "Some mud stains are harder to clear than others. Homes & Gardens quotes James King saying mud mixed with oils or dyes is harder to remove, and lighter or natural-fibre carpets stain more easily. Treating the stain quickly, once the mud is dry, makes removal easier.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Need Help With Muddy Carpets?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Tell a professional the carpet's fibre, how old the stain is and what you have already tried.",
+          },
+          {
+            type: "paragraph",
+            text: [
+              "Looking for local help? Browse carpet cleaning in ",
+              { text: "Edinburgh", href: "/areas/edinburgh" },
+              " or ",
+              { text: "Dundee", href: "/areas/dundee" },
+              ", or ",
+              { text: "get in touch", href: "/contact-us" },
+              " with a question about your carpet.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPostsSortedByDate(): BlogPost[] {
