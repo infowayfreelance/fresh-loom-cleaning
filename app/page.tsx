@@ -13,7 +13,7 @@ import GlasgowCoverage from "@/components/home/GlasgowCoverage";
 import HomeFaq from "@/components/home/HomeFaq";
 import FinalCta from "@/components/home/FinalCta";
 import { SITE_URL, BUSINESS_ID } from "@/lib/seo";
-const title = "Carpet Cleaning Glasgow | Fresh Loom Carpet Cleaning";
+const title = "Professional Carpet Cleaning Glasgow | Fresh Loom";
 const description =
   "Trusted carpet cleaning in Glasgow for carpets, rugs, sofas and upholstery, with 10+ years' experience. Request a free quote from Fresh Loom today.";
 
