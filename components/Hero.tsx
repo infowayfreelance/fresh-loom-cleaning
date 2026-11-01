@@ -26,18 +26,21 @@ function GoogleReviewsBadge() {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Fresh Loom Carpet Cleaning rated ${rating} out of 5 on Google, from ${count} reviews — opens Google in a new tab`}
-      className="animate-fade-up inline-flex w-fit items-center gap-1.5 self-start rounded-full border border-navy/10 bg-white/95 px-3 py-1.5 shadow-sm transition-colors hover:border-accent/30 hover:shadow-md lg:absolute lg:top-6 lg:right-6 lg:z-10"
+      aria-label={`${siteInfo.name} rated ${rating} out of 5 on Google, from ${count} reviews — opens Google in a new tab`}
+      className="animate-fade-up mb-4 flex w-fit flex-col gap-1 rounded-2xl border border-navy/10 bg-white/95 px-3 py-2 shadow-sm transition-colors hover:border-accent/30 hover:shadow-md"
     >
-      <GoogleIcon className="h-4 w-4 shrink-0" />
-      <span className="font-bold text-navy-dark text-xs sm:text-sm">{rating}</span>
-      <span className="flex items-center text-amber-400" aria-hidden="true">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star key={i} size={11} fill="currentColor" strokeWidth={0} />
-        ))}
-      </span>
-      <span className="whitespace-nowrap text-xs text-slate-500 sm:text-sm">
-        {count} Google reviews
+      <span className="text-xs font-bold text-navy-dark sm:text-sm">{siteInfo.name}</span>
+      <span className="flex items-center gap-1.5">
+        <GoogleIcon className="h-4 w-4 shrink-0" />
+        <span className="font-bold text-navy-dark text-xs sm:text-sm">{rating}</span>
+        <span className="flex items-center text-amber-400" aria-hidden="true">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={i} size={11} fill="currentColor" strokeWidth={0} />
+          ))}
+        </span>
+        <span className="whitespace-nowrap text-xs text-slate-500 sm:text-sm">
+          {count} Google reviews
+        </span>
       </span>
     </a>
   );
@@ -47,8 +50,8 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
-        <GoogleReviewsBadge />
         <div>
+          <GoogleReviewsBadge />
           <span className="eyebrow mb-4 animate-fade-up">
             <Tag size={16} /> Glasgow&apos;s Cleaning Specialists
           </span>
