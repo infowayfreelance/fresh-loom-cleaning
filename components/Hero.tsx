@@ -49,8 +49,8 @@ function GoogleReviewsBadge() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      <div className="container-page grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
-        <div>
+      <div className="container-page grid lg:grid-cols-2 gap-12 items-center pt-8 pb-16 lg:pt-12 lg:pb-24">
+        <div className="lg:self-start">
           <GoogleReviewsBadge />
           <span className="eyebrow mb-4 animate-fade-up">
             <Tag size={16} /> Glasgow&apos;s Cleaning Specialists
